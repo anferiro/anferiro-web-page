@@ -1,5 +1,8 @@
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
+    // Visitor Counter
+    initVisitorCounter();
+    
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -129,3 +132,50 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Visitor Counter Functionality
+function initVisitorCounter() {
+    console.log('Initializing visitor counter...');
+    const visitorCountElement = document.getElementById('visitor-count');
+    
+    if (visitorCountElement) {
+        console.log('Visitor count element found');
+        // Check if visitor has been counted today
+        const today = new Date().toDateString();
+        const lastVisit = localStorage.getItem('lastVisit');
+        const currentCount = parseInt(localStorage.getItem('visitorCount') || '0');
+        
+        console.log('Current count:', currentCount, 'Last visit:', lastVisit, 'Today:', today);
+        
+        // Only increment if it's a new day or first visit
+        if (lastVisit !== today) {
+            const newCount = currentCount + 1;
+            localStorage.setItem('visitorCount', newCount.toString());
+            localStorage.setItem('lastVisit', today);
+            
+            console.log('Incrementing count to:', newCount);
+            // Update display with animation
+            updateCounterDisplay(visitorCountElement, newCount);
+        } else {
+            // Just display current count
+            console.log('Displaying current count:', currentCount);
+            visitorCountElement.textContent = currentCount;
+        }
+    } else {
+        console.log('Visitor count element NOT found');
+    }
+}
+
+function updateCounterDisplay(element, count) {
+    // Animate counter
+    let current = 0;
+    const increment = count / 30; // 30 steps animation
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= count) {
+            current = count;
+            clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+    }, 50);
+}

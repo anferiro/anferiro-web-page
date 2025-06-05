@@ -182,6 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initialize visitor counter
+    console.log('🚀 About to initialize visitor counter...');
     initializeVisitorCounter();
 });
 
@@ -252,17 +253,36 @@ window.addEventListener('scroll', trackScrollDepth);
 
 // Visitor Counter Implementation with GoatCounter
 async function initializeVisitorCounter() {
+    console.log('🔄 Initializing visitor counter...');
+    
     const counterElement = document.getElementById('visitor-count');
-    if (!counterElement) return;
+    if (!counterElement) {
+        console.log('❌ Counter element not found!');
+        return;
+    }
+    
+    console.log('✅ Counter element found, attempting GoatCounter API...');
 
     try {
         // Use GoatCounter API for real visitor counting
+        console.log('📡 Fetching from GoatCounter API...');
         const response = await fetch('https://anferiro.goatcounter.com/counter/visits.json');
+        
+        console.log('📥 Response status:', response.status);
+        console.log('📥 Response ok:', response.ok);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
         const data = await response.json();
         
-        console.log('GoatCounter API response:', data); // Debug log
+        console.log('🎯 GoatCounter API response:', data);
+        console.log('🔍 Data type:', typeof data);
+        console.log('🔍 Data keys:', Object.keys(data));
         
         if (data && data.count) {
+            console.log('✅ Using GoatCounter data:', data.count);
             // Animate to real count from GoatCounter
             animateCounter(counterElement, data.count);
             
@@ -275,12 +295,27 @@ async function initializeVisitorCounter() {
                 });
             }
         } else {
-            console.log('GoatCounter API did not return expected data, using fallback');
-            // Fallback to local counter
-            initializeLocalCounter();
+            console.log('⚠️ GoatCounter API did not return expected data structure');
+            console.log('📋 Trying alternative data paths...');
+            
+            // Try different data structures GoatCounter might return
+            let count = null;
+            if (data.total) count = data.total;
+            else if (data.visits) count = data.visits;
+            else if (data.pageviews) count = data.pageviews;
+            else if (typeof data === 'number') count = data;
+            
+            if (count) {
+                console.log('✅ Found count in alternative path:', count);
+                animateCounter(counterElement, count);
+            } else {
+                console.log('❌ No usable data found, using fallback');
+                initializeLocalCounter();
+            }
         }
     } catch (error) {
-        console.log('Error loading GoatCounter data, using fallback:', error);
+        console.log('❌ Error loading GoatCounter data:', error);
+        console.log('🔄 Using fallback counter...');
         // Fallback to local counter but start with a higher number
         initializeLocalCounterWithGoatCounterFallback();
     }

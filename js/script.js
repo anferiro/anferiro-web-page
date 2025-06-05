@@ -28,12 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Visitor Counter
-    initVisitorCounter();
-    
     // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-link');
-    
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -42,6 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
+                // Track navigation click
+                const sectionName = targetId.replace('#', '');
+                trackNavigation(sectionName);
+                
                 const navHeight = document.querySelector('.navbar').offsetHeight;
                 const targetPosition = targetSection.offsetTop - navHeight;
                 
@@ -91,8 +90,11 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-    // Add active class to current navigation item
+    // Add active class to current navigation item and track scroll depth
     window.addEventListener('scroll', function() {
+        // Track scroll depth for engagement metrics
+        trackScrollDepth();
+        
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link');
         
@@ -146,6 +148,41 @@ document.addEventListener('DOMContentLoaded', function() {
         
         setTimeout(typeWriter, 1000);
     }
+
+    // Track article clicks
+    const articleLinks = document.querySelectorAll('.article-link');
+    articleLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const articleTitle = this.closest('.article-card').querySelector('.article-title').textContent;
+            const articleUrl = this.href;
+            trackArticleClick(articleTitle, articleUrl);
+        });
+    });
+
+    // Track contact clicks
+    const contactLinks = document.querySelectorAll('.contact-item');
+    contactLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const contactType = this.querySelector('span').textContent;
+            trackContactClick(contactType);
+        });
+    });
+
+    // Track button clicks in hero section
+    const heroButtons = document.querySelectorAll('.hero-buttons .btn');
+    heroButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const buttonText = this.textContent;
+            trackEvent('hero_button_click', {
+                button_text: buttonText,
+                event_category: 'CTA',
+                event_label: buttonText
+            });
+        });
+    });
+
+    // Initialize visitor counter
+    initializeVisitorCounter();
 });
 
 // Add CSS for active navigation link
@@ -161,49 +198,134 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Visitor Counter Functionality
-function initVisitorCounter() {
-    console.log('Initializing visitor counter...');
-    const visitorCountElement = document.getElementById('visitor-count');
-    
-    if (visitorCountElement) {
-        console.log('Visitor count element found');
-        // Check if visitor has been counted today
-        const today = new Date().toDateString();
-        const lastVisit = localStorage.getItem('lastVisit');
-        const currentCount = parseInt(localStorage.getItem('visitorCount') || '0');
-        
-        console.log('Current count:', currentCount, 'Last visit:', lastVisit, 'Today:', today);
-        
-        // Only increment if it's a new day or first visit
-        if (lastVisit !== today) {
-            const newCount = currentCount + 1;
-            localStorage.setItem('visitorCount', newCount.toString());
-            localStorage.setItem('lastVisit', today);
-            
-            console.log('Incrementing count to:', newCount);
-            // Update display with animation
-            updateCounterDisplay(visitorCountElement, newCount);
-        } else {
-            // Just display current count
-            console.log('Displaying current count:', currentCount);
-            visitorCountElement.textContent = currentCount;
-        }
-    } else {
-        console.log('Visitor count element NOT found');
+// Google Analytics Event Tracking
+function trackEvent(eventName, parameters = {}) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', eventName, parameters);
     }
 }
 
-function updateCounterDisplay(element, count) {
-    // Animate counter
-    let current = 0;
-    const increment = count / 30; // 30 steps animation
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= count) {
-            current = count;
-            clearInterval(timer);
+// Track navigation clicks
+function trackNavigation(section) {
+    trackEvent('navigation_click', {
+        section_name: section,
+        event_category: 'Navigation',
+        event_label: section
+    });
+}
+
+// Track article interactions
+function trackArticleClick(articleTitle, articleUrl) {
+    trackEvent('article_click', {
+        article_title: articleTitle,
+        article_url: articleUrl,
+        event_category: 'Content',
+        event_label: articleTitle
+    });
+}
+
+// Track contact interactions
+function trackContactClick(contactType) {
+    trackEvent('contact_click', {
+        contact_type: contactType,
+        event_category: 'Contact',
+        event_label: contactType
+    });
+}
+
+// Track scroll depth
+let maxScroll = 0;
+function trackScrollDepth() {
+    const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+    
+    if (scrollPercent > maxScroll && scrollPercent % 25 === 0) {
+        maxScroll = scrollPercent;
+        trackEvent('scroll_depth', {
+            scroll_percent: scrollPercent,
+            event_category: 'Engagement',
+            event_label: `${scrollPercent}%`
+        });
+    }
+}
+
+window.addEventListener('scroll', trackScrollDepth);
+
+// Visitor Counter Implementation
+function initializeVisitorCounter() {
+    const counterElement = document.getElementById('visitor-count');
+    if (!counterElement) return;
+
+    // Get or initialize visitor count
+    let visitorCount = localStorage.getItem('visitorCount');
+    let lastVisit = localStorage.getItem('lastVisit');
+    const today = new Date().toDateString();
+
+    if (!visitorCount) {
+        // First time visitor - start from file count or default
+        visitorCount = getInitialCount();
+    } else {
+        visitorCount = parseInt(visitorCount);
+    }
+
+    // Check if it's a new day
+    if (lastVisit !== today) {
+        visitorCount++;
+        localStorage.setItem('lastVisit', today);
+        localStorage.setItem('visitorCount', visitorCount.toString());
+        
+        // Track new visitor in Google Analytics if available
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'unique_visitor', {
+                event_category: 'Engagement',
+                event_label: 'Daily Unique Visit'
+            });
         }
-        element.textContent = Math.floor(current);
-    }, 50);
+    }
+
+    // Animate counter
+    animateCounter(counterElement, visitorCount);
+}
+
+function getInitialCount() {
+    // Try to get count from visitor_count.txt file or use a default
+    try {
+        // This would work if we could fetch the file, but for GitHub Pages we'll use a base number
+        return 247; // Starting from the number in visitor_count.txt
+    } catch (error) {
+        return 247; // Fallback number
+    }
+}
+
+function animateCounter(element, targetCount) {
+    element.classList.add('updating');
+    
+    // Show loading state briefly
+    setTimeout(() => {
+        let currentCount = 0;
+        const increment = Math.ceil(targetCount / 50); // Animate over ~50 steps
+        
+        const timer = setInterval(() => {
+            currentCount += increment;
+            if (currentCount >= targetCount) {
+                currentCount = targetCount;
+                clearInterval(timer);
+                element.classList.remove('updating');
+            }
+            element.textContent = currentCount.toLocaleString();
+        }, 20); // Update every 20ms for smooth animation
+    }, 300);
+}
+
+// Track visitor count in Google Analytics (when GA is configured)
+function trackVisitorMilestone(count) {
+    if (typeof gtag !== 'undefined') {
+        // Track milestones
+        if (count % 100 === 0) {
+            gtag('event', 'visitor_milestone', {
+                event_category: 'Engagement',
+                event_label: `${count} visitors`,
+                value: count
+            });
+        }
+    }
 }

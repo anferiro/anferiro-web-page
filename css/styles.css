@@ -247,6 +247,23 @@ body {
   object-position: center;
 }
 
+.hero-visitor-badge {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.hero-visitor-badge img {
+  height: 24px;
+  border-radius: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.hero-visitor-badge:hover img {
+  opacity: 1;
+}
+
 /* Section Styles */
 section {
   padding: 5rem 0;
@@ -651,25 +668,58 @@ section {
   font-weight: 500;
 }
 
+.visitor-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.visitor-badge img {
+  height: 20px;
+  border-radius: 4px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.visitor-badge img:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Visitor Counter Styles */
 .visitor-counter {
-  opacity: 0.8;
-  font-size: 0.9rem;
-  font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
 }
 
-.visitor-counter span {
-  color: #ccc;
+.visitor-counter:hover {
+  opacity: 1;
 }
 
-#visitor-count {
+.counter-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.counter-number {
   font-weight: 700;
   color: #fff;
   background: rgba(255, 255, 255, 0.1);
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  min-width: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.counter-number.updating {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
 }
 
 /* Responsive Design */

@@ -41,6 +41,11 @@ class SectionLoader {
             // Trigger any section-specific initialization
             this.initializeSection(sectionName);
             
+            // Update translations for newly loaded content
+            if (typeof i18n !== 'undefined') {
+                i18n.updatePage();
+            }
+            
         } catch (error) {
             console.error(`Error loading section ${sectionName}:`, error);
         }

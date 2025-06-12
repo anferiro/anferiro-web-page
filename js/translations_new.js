@@ -86,7 +86,7 @@ const translations = {
       subtitle: "Biblical wisdom that grounds my journey",
       // Bible verses
       proverbs356: "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
-      jeremiah2911: "\"For I know the plans I have for you,\" declares the Lord, \"plans to prosper you and not to harm you, to give you hope and a future.\"",
+      jeremiah2911: "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, to give you hope and a future.",
       philippians413: "I can do all this through him who gives me strength.",
       romans828: "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
       psalm4610: "Be still, and know that I am God; I will be exalted among the nations, I will be exalted in the earth.",
@@ -201,7 +201,7 @@ const translations = {
       subtitle: "Sabiduría bíblica que fundamenta mi camino",
       // Bible verses
       proverbs356: "Confía en el Señor con todo tu corazón y no te apoyes en tu propia comprensión; en todos tus caminos sométete a él, y él enderezará tus sendas.",
-      jeremiah2911: "\"Porque yo sé los planes que tengo para ustedes,\" declara el Señor, \"planes de prosperarlos y no de hacerles daño, para darles esperanza y un futuro.\"",
+      jeremiah2911: "Porque yo sé los planes que tengo para ustedes," declara el Señor, "planes de prosperarlos y no de hacerles daño, para darles esperanza y un futuro.",
       philippians413: "Todo lo puedo en Cristo que me fortalece.",
       romans828: "Y sabemos que en todas las cosas Dios obra para el bien de aquellos que lo aman, que han sido llamados de acuerdo con su propósito.",
       psalm4610: "Quédense quietos y sepan que yo soy Dios; seré exaltado entre las naciones, seré exaltado en la tierra.",

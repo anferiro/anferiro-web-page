@@ -54,12 +54,13 @@
         <span></span>
       </div>
       <div class="nav-menu" id="nav-menu">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#bio" class="nav-link">Bio</a>
-        <a href="#articles" class="nav-link">Articles</a>
-        <a href="#quotes" class="nav-link">Quotes</a>
-        <a href="#keep-me-real" class="nav-link">Spiritual</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
+        <a href="#bio" class="nav-link" data-i18n="nav.bio">Bio</a>
+        <a href="#articles" class="nav-link" data-i18n="nav.articles">Articles</a>
+        <a href="#quotes" class="nav-link" data-i18n="nav.quotes">Quotes</a>
+        <a href="#keep-me-real" class="nav-link" data-i18n="nav.spiritual">Spiritual</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <button id="language-toggle" class="language-toggle" title="Cambiar idioma / Switch language">ES</button>
       </div>
     </div>
   </nav>
@@ -69,13 +70,13 @@
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="hero-motto">Be a better version of myself everyday</h1>
-          <h2 class="hero-name">Andres Rincon</h2>
-          <p class="hero-subtitle">Developer • Architect • Leader • Manager</p>
-          <p class="hero-description">Passionate technologist leading fintech innovation with 20+ years' experience. Committed to transforming the world responsibly through AI.</p>
+          <h1 class="hero-motto" data-i18n="hero.motto">Be a better version of myself everyday</h1>
+          <h2 class="hero-name" data-i18n="hero.name">Andres Rincon</h2>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">Developer • Architect • Leader • Manager</p>
+          <p class="hero-description" data-i18n="hero.description">Passionate technologist leading fintech innovation with 20+ years' experience. Committed to transforming the world responsibly through AI.</p>
           <div class="hero-buttons">
-            <a href="#articles" class="btn btn-primary">Read Articles</a>
-            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            <a href="#articles" class="btn btn-primary" data-i18n="hero.readArticles">Read Articles</a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="hero.getInTouch">Get In Touch</a>
           </div>
           <!-- Visitor tracking now handled by Google Analytics -->
         </div>
@@ -92,8 +93,8 @@
   <section id="bio" class="bio">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">My journey, philosophy, and expertise</p>
+        <h2 class="section-title" data-i18n="bio.title">About Me</h2>
+        <p class="section-subtitle" data-i18n="bio.subtitle">My journey, philosophy, and expertise</p>
       </div>
       
       <div class="bio-hero-content">
@@ -101,8 +102,8 @@
           <img src="img/bio-photo.jpg" alt="Andres Rincon - Biography Photo" class="bio-photo">
         </div>
         <div class="bio-text-intro">
-          <h3 class="bio-intro-title">Passionate Technologist & Innovation Leader</h3>
-          <p class="bio-intro-description">
+          <h3 class="bio-intro-title" data-i18n="bio.introTitle">Passionate Technologist & Innovation Leader</h3>
+          <p class="bio-intro-description" data-i18n="bio.introDescription">
             With over 20 years of experience in technology and financial services, I've dedicated my career to transforming ideas into reality through innovative software solutions. My journey began as a developer, driven by curiosity and a passion for solving complex problems through code.
           </p>
         </div>
@@ -110,44 +111,44 @@
 
       <div class="bio-content">
         <div class="philosophy-section">
-          <h3 class="bio-section-title">Philosophy & Values</h3>
+          <h3 class="bio-section-title" data-i18n="bio.philosophyTitle">Philosophy & Values</h3>
           <div class="philosophy-grid">
             <div class="philosophy-card">
               <i class="fas fa-rocket"></i>
-              <h4>Continuous Growth</h4>
-              <p>I believe in being a better version of myself every day, constantly learning and adapting to new challenges and technologies.</p>
+              <h4 data-i18n="bio.continuousGrowth">Continuous Growth</h4>
+              <p data-i18n="bio.continuousGrowthDesc">I believe in being a better version of myself every day, constantly learning and adapting to new challenges and technologies.</p>
             </div>
             <div class="philosophy-card">
               <i class="fas fa-users"></i>
-              <h4>People First</h4>
-              <p>Technology is powerful, but it's the people behind it that make the real difference. I focus on building and leading high-performing teams.</p>
+              <h4 data-i18n="bio.peopleFirst">People First</h4>
+              <p data-i18n="bio.peopleFirstDesc">Technology is powerful, but it's the people behind it that make the real difference. I focus on building and leading high-performing teams.</p>
             </div>
             <div class="philosophy-card">
               <i class="fas fa-shield-alt"></i>
-              <h4>Responsible Innovation</h4>
-              <p>In the age of AI, I'm committed to developing technology that transforms the world responsibly and ethically.</p>
+              <h4 data-i18n="bio.responsibleInnovation">Responsible Innovation</h4>
+              <p data-i18n="bio.responsibleInnovationDesc">In the age of AI, I'm committed to developing technology that transforms the world responsibly and ethically.</p>
             </div>
           </div>
         </div>
 
         <div class="expertise-section">
-          <h3 class="bio-section-title">Expertise & Focus Areas</h3>
+          <h3 class="bio-section-title" data-i18n="bio.expertiseTitle">Expertise & Focus Areas</h3>
           <div class="expertise-grid">
             <div class="expertise-item">
-              <h4>Financial Technology</h4>
-              <p>Leading fintech innovation with expertise in payment systems, digital banking, and financial infrastructure.</p>
+              <h4 data-i18n="bio.fintech">Financial Technology</h4>
+              <p data-i18n="bio.fintechDesc">Leading fintech innovation with expertise in payment systems, digital banking, and financial infrastructure.</p>
             </div>
             <div class="expertise-item">
-              <h4>Architecture Design Systems</h4>
-              <p>Developing scalable architecture frameworks and design systems that drive consistency and efficiency across organizations.</p>
+              <h4 data-i18n="bio.architecture">Architecture Design Systems</h4>
+              <p data-i18n="bio.architectureDesc">Developing scalable architecture frameworks and design systems that drive consistency and efficiency across organizations.</p>
             </div>
             <div class="expertise-item">
-              <h4>AI & Digital Transformation</h4>
-              <p>Guiding organizations through digital transformation journeys, leveraging AI and modern technologies responsibly.</p>
+              <h4 data-i18n="bio.aiTransformation">AI & Digital Transformation</h4>
+              <p data-i18n="bio.aiTransformationDesc">Guiding organizations through digital transformation journeys, leveraging AI and modern technologies responsibly.</p>
             </div>
             <div class="expertise-item">
-              <h4>Team Leadership</h4>
-              <p>Building and nurturing high-performance engineering teams that deliver exceptional results while maintaining work-life balance.</p>
+              <h4 data-i18n="bio.teamLeadership">Team Leadership</h4>
+              <p data-i18n="bio.teamLeadershipDesc">Building and nurturing high-performance engineering teams that deliver exceptional results while maintaining work-life balance.</p>
             </div>
           </div>
         </div>
@@ -159,50 +160,50 @@
   <section id="articles" class="articles">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">My Articles</h2>
-        <p class="section-subtitle">Insights on Architecture Design Systems and Software Development</p>
+        <h2 class="section-title" data-i18n="articles.title">My Articles</h2>
+        <p class="section-subtitle" data-i18n="articles.subtitle">Insights on Architecture Design Systems and Software Development</p>
       </div>
       <div class="articles-grid">
         <article class="article-card">
           <div class="article-header">
-            <span class="article-category">Architecture</span>
+            <span class="article-category" data-i18n="articles.category">Architecture</span>
             <span class="article-date">Jun 4, 2025</span>
           </div>
-          <h3 class="article-title">Diagrams as Code</h3>
-          <p class="article-excerpt">Exploring Mingrammer framework to create architecture diagrams using code, with Docker setup and integration with VS Code for modern development workflows.</p>
-          <a href="https://anferiro.medium.com/ba56be95ab48" class="article-link" target="_blank">Read on Medium</a>
+          <h3 class="article-title" data-i18n="articles.diagramsAsCodeTitle">Diagrams as Code</h3>
+          <p class="article-excerpt" data-i18n="articles.diagramsAsCodeExcerpt">Exploring Mingrammer framework to create architecture diagrams using code, with Docker setup and integration with VS Code for modern development workflows.</p>
+          <a href="https://anferiro.medium.com/ba56be95ab48" class="article-link" target="_blank" data-i18n="articles.readOnMedium">Read on Medium</a>
         </article>
         
         <article class="article-card">
           <div class="article-header">
-            <span class="article-category">Architecture</span>
+            <span class="article-category" data-i18n="articles.category">Architecture</span>
             <span class="article-date">Jan 25, 2024</span>
           </div>
-          <h3 class="article-title">Architectural Knockout: Building Your Design System</h3>
-          <p class="article-excerpt">After the definition of the Architecture Design System (ADS) and its Concepts, it is time to present how to build an ADS using BAU tools.</p>
-          <a href="https://medium.com/@anferiro/architectural-knockout-building-your-design-system-edbae5edc106" class="article-link" target="_blank">Read on Medium</a>
+          <h3 class="article-title" data-i18n="articles.architecturalKnockoutTitle">Architectural Knockout: Building Your Design System</h3>
+          <p class="article-excerpt" data-i18n="articles.architecturalKnockoutExcerpt">After the definition of the Architecture Design System (ADS) and its Concepts, it is time to present how to build an ADS using BAU tools.</p>
+          <a href="https://medium.com/@anferiro/architectural-knockout-building-your-design-system-edbae5edc106" class="article-link" target="_blank" data-i18n="articles.readOnMedium">Read on Medium</a>
         </article>
         
         <article class="article-card">
           <div class="article-header">
-            <span class="article-category">Architecture</span>
+            <span class="article-category" data-i18n="articles.category">Architecture</span>
             <span class="article-date">Dec 15, 2023</span>
           </div>
-          <h3 class="article-title">Components of the Architecture Design System</h3>
-          <p class="article-excerpt">In the previous article I presented the concept of the architecture design system, highlighting two of their three principal elements.</p>
-          <a href="https://medium.com/@anferiro/components-of-the-architecture-design-system-b6d018f2926e" class="article-link" target="_blank">Read on Medium</a>
+          <h3 class="article-title" data-i18n="articles.componentsTitle">Components of the Architecture Design System</h3>
+          <p class="article-excerpt" data-i18n="articles.componentsExcerpt">In the previous article I presented the concept of the architecture design system, highlighting two of their three principal elements.</p>
+          <a href="https://medium.com/@anferiro/components-of-the-architecture-design-system-b6d018f2926e" class="article-link" target="_blank" data-i18n="articles.readOnMedium">Read on Medium</a>
         </article>
         
         <article class="article-card">
           <div class="article-header">
-            <span class="article-category">Architecture</span>
+            <span class="article-category" data-i18n="articles.category">Architecture</span>
             <span class="article-date">Dec 5, 2023</span>
           </div>
-          <h3 class="article-title">Architecture Design System</h3>
-          <p class="article-excerpt">Practical approach to implementing architecture design systems in modern software development environments.</p>
+          <h3 class="article-title" data-i18n="articles.designSystemTitle">Architecture Design System</h3>
+          <p class="article-excerpt" data-i18n="articles.designSystemExcerpt">Practical approach to implementing architecture design systems in modern software development environments.</p>
           <div class="article-links">
-            <a href="https://medium.com/@anferiro/architecture-design-system-f24eb1b53638" class="article-link" target="_blank">Read on Medium</a>
-            <a href="https://open.substack.com/pub/anferiro/p/architecture-design-system?r=dnpol&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="article-link substack-link" target="_blank">Read on Substack</a>
+            <a href="https://medium.com/@anferiro/architecture-design-system-f24eb1b53638" class="article-link" target="_blank" data-i18n="articles.readOnMedium">Read on Medium</a>
+            <a href="https://open.substack.com/pub/anferiro/p/architecture-design-system?r=dnpol&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="article-link substack-link" target="_blank" data-i18n="articles.readOnSubstack">Read on Substack</a>
           </div>
         </article>
       </div>
@@ -213,66 +214,66 @@
   <section id="quotes" class="quotes">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Favorite Quotes</h2>
-        <p class="section-subtitle">Words that inspire and guide my journey</p>
+        <h2 class="section-title" data-i18n="quotes.title">Favorite Quotes</h2>
+        <p class="section-subtitle" data-i18n="quotes.subtitle">Words that inspire and guide my journey</p>
       </div>
       <div class="quotes-grid">
         <div class="quote-card">
           <div class="quote-content">
-            <blockquote class="quote-text">
+            <blockquote class="quote-text" data-i18n="quotes.dickGabrielQuote">
               "A man who has the knowledge but lacks the power to clearly express it is no better off than if he never had any ideas at all."
             </blockquote>
             <cite class="quote-author">Dick Gabriel</cite>
-            <span class="quote-category">Software Architecture</span>
+            <span class="quote-category" data-i18n="quotes.softwareArchitectureCategory">Software Architecture</span>
           </div>
         </div>
         <div class="quote-card">
           <div class="quote-content">
-            <blockquote class="quote-text">
+            <blockquote class="quote-text" data-i18n="quotes.andresGoodSoftwareQuote">
               "Good software is about balance craftsmanship, maintainability and feature vision."
             </blockquote>
             <cite class="quote-author">Andres Rincon</cite>
-            <span class="quote-category">Development</span>
+            <span class="quote-category" data-i18n="quotes.developmentCategory">Development</span>
           </div>
         </div>
         
         
         <div class="quote-card">
           <div class="quote-content">
-            <blockquote class="quote-text">
+            <blockquote class="quote-text" data-i18n="quotes.andresLikesQuote">
               "I only give likes to social media posts; PRs are thoroughly reviewed."
             </blockquote>
             <cite class="quote-author">Andres Rincon</cite>
-            <span class="quote-category">Development</span>
+            <span class="quote-category" data-i18n="quotes.developmentCategory">Development</span>
           </div>
         </div>
         
         <div class="quote-card">
           <div class="quote-content">
-            <blockquote class="quote-text">
+            <blockquote class="quote-text" data-i18n="quotes.coryHouseQuote">
               "Code is like humor. When you have to explain it, it's bad."
             </blockquote>
             <cite class="quote-author">Cory House</cite>
-            <span class="quote-category">Development</span>
+            <span class="quote-category" data-i18n="quotes.developmentCategory">Development</span>
           </div>
         </div>
         
         <div class="quote-card">
           <div class="quote-content">
-            <blockquote class="quote-text">
+            <blockquote class="quote-text" data-i18n="quotes.robertGreeneQuote">
               "The future belongs to those who learn more skills and combine them in creative ways."
             </blockquote>
             <cite class="quote-author">Robert Greene</cite>
-            <span class="quote-category">Growth</span>
+            <span class="quote-category" data-i18n="quotes.growthCategory">Growth</span>
           </div>
         </div>
         <div class="quote-card">
           <div class="quote-content">
-            <blockquote class="quote-text">
+            <blockquote class="quote-text" data-i18n="quotes.heraclitusQuote">
               "Everything changes and nothing stands still"
             </blockquote>
             <cite class="quote-author">Heraclitus</cite>
-            <span class="quote-category">Growth</span>
+            <span class="quote-category" data-i18n="quotes.growthCategory">Growth</span>
           </div>
         </div>
       </div>
@@ -283,16 +284,16 @@
   <section id="keep-me-real" class="keep-me-real">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Spiritual</h2>
-        <p class="section-subtitle">Biblical wisdom that grounds my journey</p>
+        <h2 class="section-title" data-i18n="spiritual.title">Spiritual</h2>
+        <p class="section-subtitle" data-i18n="spiritual.subtitle">Biblical wisdom that grounds my journey</p>
       </div>
       <div class="bible-quotes-list">
         <div class="bible-quote-item">
           <div class="quote-info">
             <cite class="bible-reference">Proverbs 3:5-6</cite>
-            <span class="quote-theme">Trust & Guidance</span>
+            <span class="quote-theme" data-i18n="spiritual.trustGuidanceTheme">Trust & Guidance</span>
           </div>
-          <blockquote class="bible-text">
+          <blockquote class="bible-text" data-i18n="spiritual.proverbs356">
             "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight."
           </blockquote>
         </div>
@@ -300,9 +301,9 @@
         <div class="bible-quote-item">
           <div class="quote-info">
             <cite class="bible-reference">Jeremiah 29:11</cite>
-            <span class="quote-theme">Hope & Purpose</span>
+            <span class="quote-theme" data-i18n="spiritual.hopePurposeTheme">Hope & Purpose</span>
           </div>
-          <blockquote class="bible-text">
+          <blockquote class="bible-text" data-i18n="spiritual.jeremiah2911">
             "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, to give you hope and a future."
           </blockquote>
         </div>
@@ -310,9 +311,9 @@
         <div class="bible-quote-item">
           <div class="quote-info">
             <cite class="bible-reference">Philippians 4:13</cite>
-            <span class="quote-theme">Strength</span>
+            <span class="quote-theme" data-i18n="spiritual.strengthTheme">Strength</span>
           </div>
-          <blockquote class="bible-text">
+          <blockquote class="bible-text" data-i18n="spiritual.philippians413">
             "I can do all this through him who gives me strength."
           </blockquote>
         </div>
@@ -320,9 +321,9 @@
         <div class="bible-quote-item">
           <div class="quote-info">
             <cite class="bible-reference">Romans 8:28</cite>
-            <span class="quote-theme">Faith & Purpose</span>
+            <span class="quote-theme" data-i18n="spiritual.faithPurposeTheme">Faith & Purpose</span>
           </div>
-          <blockquote class="bible-text">
+          <blockquote class="bible-text" data-i18n="spiritual.romans828">
             "And we know that in all things God works for the good of those who love him, who have been called according to his purpose."
           </blockquote>
         </div>
@@ -330,9 +331,9 @@
         <div class="bible-quote-item">
           <div class="quote-info">
             <cite class="bible-reference">Psalm 46:10</cite>
-            <span class="quote-theme">Peace & Stillness</span>
+            <span class="quote-theme" data-i18n="spiritual.peaceStillnessTheme">Peace & Stillness</span>
           </div>
-          <blockquote class="bible-text">
+          <blockquote class="bible-text" data-i18n="spiritual.psalm4610">
             "Be still, and know that I am God; I will be exalted among the nations, I will be exalted in the earth."
           </blockquote>
         </div>
@@ -340,9 +341,9 @@
         <div class="bible-quote-item">
           <div class="quote-info">
             <cite class="bible-reference">Colossians 3:23</cite>
-            <span class="quote-theme">Work & Excellence</span>
+            <span class="quote-theme" data-i18n="spiritual.workExcellenceTheme">Work & Excellence</span>
           </div>
-          <blockquote class="bible-text">
+          <blockquote class="bible-text" data-i18n="spiritual.colossians323">
             "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters."
           </blockquote>
         </div>
@@ -350,9 +351,9 @@
         <div class="bible-quote-item">
           <div class="quote-info">
             <cite class="bible-reference">Joshua 1:9</cite>
-            <span class="quote-theme">Leadership & Courage</span>
+            <span class="quote-theme" data-i18n="spiritual.leadershipCourageTheme">Leadership & Courage</span>
           </div>
-          <blockquote class="bible-text">
+          <blockquote class="bible-text" data-i18n="spiritual.joshua19">
             "Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go."
           </blockquote>
         </div>
@@ -364,8 +365,8 @@
   <section id="contact" class="contact">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Let's Connect</h2>
-        <p class="section-subtitle">Ready to start a conversation?</p>
+        <h2 class="section-title" data-i18n="contact.title">Let's Connect</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">Ready to start a conversation?</p>
       </div>
       <div class="contact-content">
         <div class="contact-info">
@@ -398,15 +399,77 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <p>&copy; 2025 Andres Rincon. Made with ❤️</p>
+        <p>&copy; 2025 Andres Rincon. <span data-i18n="footer.copyright">Made with ❤️</span></p>
         <div class="visitor-counter">
-          <span class="counter-label">🌍 Total Visits:</span>
+          <span class="counter-label" data-i18n="footer.totalVisits">🌍 Total Visits:</span>
           <span class="counter-number" id="visitor-count">Loading...</span>
         </div>
       </div>
     </div>
   </footer>
 
+  <script src="js/translations.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    // Initialize language system for index.html
+    document.addEventListener('DOMContentLoaded', function() {
+      // Simple language toggle setup
+      let currentLang = localStorage.getItem('language') || 'en';
+      
+      function updateLanguage() {
+        // Update HTML lang attribute
+        document.documentElement.lang = currentLang;
+        
+        // Update all translatable elements
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          const translation = getTranslation(key, currentLang);
+          element.textContent = translation;
+        });
+        
+        // Update button
+        const btn = document.getElementById('language-toggle');
+        if (btn) {
+          if (currentLang === 'en') {
+            btn.textContent = 'ES';
+            btn.setAttribute('title', 'Cambiar a Español');
+          } else {
+            btn.textContent = 'EN';
+            btn.setAttribute('title', 'Switch to English');
+          }
+        }
+        
+        // Save preference
+        localStorage.setItem('language', currentLang);
+        
+        console.log('🌍 Language changed to:', currentLang.toUpperCase());
+      }
+      
+      function getTranslation(key, lang) {
+        if (typeof translations !== 'undefined' && translations[lang]) {
+          const keys = key.split('.');
+          let value = translations[lang];
+          for (const k of keys) {
+            value = value?.[k];
+          }
+          return value || key;
+        }
+        return key;
+      }
+      
+      // Set up button click
+      const toggleBtn = document.getElementById('language-toggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+          currentLang = currentLang === 'en' ? 'es' : 'en';
+          updateLanguage();
+        });
+      }
+      
+      // Initialize on page load
+      updateLanguage();
+    });
+  </script>
 </body>
 </html>

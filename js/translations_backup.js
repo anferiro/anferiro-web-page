@@ -62,7 +62,7 @@ const translations = {
       designSystemTitle: "Architecture Design System",
       designSystemExcerpt: "Practical approach to implementing architecture design systems in modern software development environments."
     },
-    
+
     // Quotes Section
     quotes: {
       title: "Favorite Quotes",
@@ -86,7 +86,7 @@ const translations = {
       subtitle: "Biblical wisdom that grounds my journey",
       // Bible verses
       proverbs356: "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
-      jeremiah2911: "\"For I know the plans I have for you,\" declares the Lord, \"plans to prosper you and not to harm you, to give you hope and a future.\"",
+      jeremiah2911: "For I know the plans I have for you," declares the Lord, "plans to prosper you and not to harm you, to give you hope and a future.",
       philippians413: "I can do all this through him who gives me strength.",
       romans828: "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
       psalm4610: "Be still, and know that I am God; I will be exalted among the nations, I will be exalted in the earth.",
@@ -177,7 +177,7 @@ const translations = {
       designSystemTitle: "Sistema de Diseño Arquitectónico",
       designSystemExcerpt: "Enfoque práctico para implementar sistemas de diseño arquitectónico en entornos modernos de desarrollo de software."
     },
-    
+
     // Quotes Section
     quotes: {
       title: "Citas Favoritas",
@@ -195,26 +195,16 @@ const translations = {
       growthCategory: "Crecimiento"
     },
     
+    // Quotes Section
+    quotes: {
+      title: "Citas Favoritas",
+      subtitle: "Palabras que inspiran y guían mi camino"
+    },
+    
     // Spiritual Section
     spiritual: {
       title: "Espiritual",
-      subtitle: "Sabiduría bíblica que fundamenta mi camino",
-      // Bible verses
-      proverbs356: "Confía en el Señor con todo tu corazón y no te apoyes en tu propia comprensión; en todos tus caminos sométete a él, y él enderezará tus sendas.",
-      jeremiah2911: "\"Porque yo sé los planes que tengo para ustedes,\" declara el Señor, \"planes de prosperarlos y no de hacerles daño, para darles esperanza y un futuro.\"",
-      philippians413: "Todo lo puedo en Cristo que me fortalece.",
-      romans828: "Y sabemos que en todas las cosas Dios obra para el bien de aquellos que lo aman, que han sido llamados de acuerdo con su propósito.",
-      psalm4610: "Quédense quietos y sepan que yo soy Dios; seré exaltado entre las naciones, seré exaltado en la tierra.",
-      colossians323: "Todo lo que hagan, háganlo de corazón, como para el Señor y no para los hombres.",
-      joshua19: "¿No te he mandado que seas fuerte y valiente? No temas ni te desalientes, porque el Señor tu Dios estará contigo dondequiera que vayas.",
-      // Themes
-      trustGuidanceTheme: "Confianza y Guía",
-      hopePurposeTheme: "Esperanza y Propósito",
-      strengthTheme: "Fortaleza",
-      faithPurposeTheme: "Fe y Propósito",
-      peaceStillnessTheme: "Paz y Quietud",
-      workExcellenceTheme: "Trabajo y Excelencia",
-      leadershipCourageTheme: "Liderazgo y Valor"
+      subtitle: "Sabiduría bíblica que fundamenta mi camino"
     },
     
     // Contact Section

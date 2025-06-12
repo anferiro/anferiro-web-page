@@ -126,29 +126,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Typing effect for hero name (optional)
-    const heroName = document.querySelector('.hero-name');
-    if (heroName) {
-        const text = heroName.textContent;
-        heroName.textContent = '';
-        heroName.style.borderRight = '2px solid rgba(255, 255, 255, 0.7)';
-        
-        let i = 0;
-        const typeWriter = function() {
-            if (i < text.length) {
-                heroName.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            } else {
-                setTimeout(() => {
-                    heroName.style.borderRight = 'none';
-                }, 1000);
-            }
-        };
-        
-        setTimeout(typeWriter, 1000);
-    }
-
     // Track article clicks
     const articleLinks = document.querySelectorAll('.article-link');
     articleLinks.forEach(link => {

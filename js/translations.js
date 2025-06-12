@@ -52,7 +52,10 @@ const translations = {
       readOnMedium: "Read on Medium",
       readOnSubstack: "Read on Substack",
       category: "Architecture",
+      leadershipCategory: "Leadership",
       // Article titles and excerpts
+      redMeetingMadnessTitle: "Stop the Red Meeting Madness: Reclaim Your Time",
+      redMeetingMadnessExcerpt: "Practical strategies to protect your time from unnecessary meetings and focus on meaningful work that truly drives results.",
       diagramsAsCodeTitle: "Diagrams as Code",
       diagramsAsCodeExcerpt: "Exploring Mingrammer framework to create architecture diagrams using code, with Docker setup and integration with VS Code for modern development workflows.",
       architecturalKnockoutTitle: "Architectural Knockout: Building Your Design System",
@@ -60,7 +63,10 @@ const translations = {
       componentsTitle: "Components of the Architecture Design System",
       componentsExcerpt: "In the previous article I presented the concept of the architecture design system, highlighting two of their three principal elements.",
       designSystemTitle: "Architecture Design System",
-      designSystemExcerpt: "Practical approach to implementing architecture design systems in modern software development environments."
+      designSystemExcerpt: "Practical approach to implementing architecture design systems in modern software development environments.",
+      // Article navigation
+      backToArticles: "Back to Articles",
+      readFullArticle: "Read Full Article"
     },
     
     // Quotes Section
@@ -167,7 +173,10 @@ const translations = {
       readOnMedium: "Leer en Medium",
       readOnSubstack: "Leer en Substack",
       category: "Arquitectura",
+      leadershipCategory: "Liderazgo",
       // Article titles and excerpts
+      redMeetingMadnessTitle: "Detén la Locura de las Reuniones Rojas: Recupera tu Tiempo",
+      redMeetingMadnessExcerpt: "Estrategias prácticas para proteger tu tiempo de reuniones innecesarias y enfocarte en trabajo significativo que realmente impulsa resultados.",
       diagramsAsCodeTitle: "Diagramas como Código",
       diagramsAsCodeExcerpt: "Explorando el framework Mingrammer para crear diagramas de arquitectura usando código, con configuración Docker e integración con VS Code para flujos de desarrollo modernos.",
       architecturalKnockoutTitle: "Knockout Arquitectónico: Construyendo tu Sistema de Diseño",
@@ -175,7 +184,10 @@ const translations = {
       componentsTitle: "Componentes del Sistema de Diseño Arquitectónico",
       componentsExcerpt: "En el artículo anterior presenté el concepto del sistema de diseño arquitectónico, destacando dos de sus tres elementos principales.",
       designSystemTitle: "Sistema de Diseño Arquitectónico",
-      designSystemExcerpt: "Enfoque práctico para implementar sistemas de diseño arquitectónico en entornos modernos de desarrollo de software."
+      designSystemExcerpt: "Enfoque práctico para implementar sistemas de diseño arquitectónico en entornos modernos de desarrollo de software.",
+      // Article navigation
+      backToArticles: "Regresar a Artículos",
+      readFullArticle: "Leer Artículo Completo"
     },
     
     // Quotes Section

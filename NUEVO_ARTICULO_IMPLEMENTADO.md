@@ -33,10 +33,11 @@ El artículo aborda un problema común en el mundo corporativo: la sobrecarga de
 ### 📱 **Características Técnicas**
 - ✅ **Diseño responsivo** para móviles y desktop
 - ✅ **SEO optimizado** con meta tags completos
-- ✅ **Open Graph** y Twitter Cards implementados
+- ✅ **Open Graph** y Twitter Cards con imagen de portada
 - ✅ **Navegación consistente** con el sitio principal
 - ✅ **Compartir en redes sociales** integrado
 - ✅ **Google Analytics** configurado
+- ✅ **Imagen de portada** optimizada y responsiva
 
 ### 🔗 **Ubicación en el Sitio**
 1. **Página principal**: Aparece como primer artículo en la sección Articles
@@ -46,6 +47,8 @@ El artículo aborda un problema común en el mundo corporativo: la sobrecarga de
 ### 🎨 **Diseño y Estilo**
 - **Layout limpio** y profesional
 - **Tipografía mejorada** para lectura
+- **Imagen de portada** destacada (`img/articles/article.2025.06.11.png`)
+- **Efectos hover** en la imagen de portada
 - **Sección de compartir** al final del artículo
 - **Botón de regreso** a la sección de artículos
 - **Consistencia visual** con el resto del sitio

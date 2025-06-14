@@ -66,7 +66,10 @@ const translations = {
       designSystemExcerpt: "Practical approach to implementing architecture design systems in modern software development environments.",
       // Article navigation
       backToArticles: "Back to Articles",
-      readFullArticle: "Read Full Article"
+      readFullArticle: "Read Full Article",
+      readLocalVersion: "📖 Read Here",
+      readOnMediumShort: "📰 Medium",
+      readOnSubstackShort: "📧 Substack"
     },
     
     // Quotes Section
@@ -187,7 +190,10 @@ const translations = {
       designSystemExcerpt: "Enfoque práctico para implementar sistemas de diseño arquitectónico en entornos modernos de desarrollo de software.",
       // Article navigation
       backToArticles: "Regresar a Artículos",
-      readFullArticle: "Leer Artículo Completo"
+      readFullArticle: "Leer Artículo Completo",
+      readLocalVersion: "📖 Leer Aquí",
+      readOnMediumShort: "📰 Medium",
+      readOnSubstackShort: "📧 Substack"
     },
     
     // Quotes Section

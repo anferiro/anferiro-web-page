@@ -41,8 +41,10 @@ El artículo aborda un problema común en el mundo corporativo: la sobrecarga de
 
 ### 🔗 **Ubicación en el Sitio**
 1. **Página principal**: Aparece como primer artículo en la sección Articles
-2. **Archivo individual**: `red-meeting-madness.html`
-3. **Enlace local**: El artículo se aloja en el mismo sitio (no enlace externo)
+2. **Archivo individual**: `red-meeting-madness.html` (versión completa local)
+3. **Enlaces externos**: 
+   - **Medium**: https://medium.com/@anferiro/stop-the-red-meeting-madness-1f5c271cfded
+   - **Substack**: https://anferiro.substack.com/p/stop-the-red-meeting-madness?r=dnpol
 
 ### 🎨 **Diseño y Estilo**
 - **Layout limpio** y profesional

@@ -2,14 +2,14 @@
 class SectionLoader {
     constructor() {
         this.sections = {
-            'navigation': 'navigation.html',
-            'hero': 'hero.html',
-            'bio': 'bio.html',
-            'articles': 'articles.html',
-            'quotes': 'quotes.html',
-            'spiritual': 'spiritual.html',
-            'contact': 'contact.html',
-            'footer': 'footer.html'
+            'navigation': 'components/navigation.html',
+            'hero': 'components/hero.html',
+            'bio': 'pages/bio.html',
+            'articles': 'components/articles.html',
+            'quotes': 'components/quotes.html',
+            'spiritual': 'pages/spiritual.html',
+            'contact': 'components/contact.html',
+            'footer': 'components/footer.html'
         };
         this.loadedSections = new Set();
     }

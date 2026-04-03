@@ -44,27 +44,31 @@
     </script>
 
     <style>
+        /* === FULL-WIDTH ARTICLE LAYOUT === */
         .article-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
             line-height: 1.8;
             font-size: 1.1rem;
         }
         .article-header {
             display: block !important;
             text-align: center;
-            margin-bottom: 3rem;
-            padding-bottom: 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 4rem 2rem 3rem;
             border-bottom: 1px solid #e5e5e5;
         }
         .article-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem !important;
+            font-size: clamp(2rem, 5vw, 3rem) !important;
             font-weight: 700;
-            color: #333;
+            color: #1a1a2e;
             margin-bottom: 1rem;
-            line-height: 1.2;
+            line-height: 1.15;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
             letter-spacing: normal !important;
             transition: none !important;
         }
@@ -72,87 +76,104 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
             flex-wrap: wrap;
         }
-        .article-date { color: #666; font-size: 0.95rem; }
+        .article-date { color: #666; font-size: 0.9rem; }
         .article-category {
-            background: #f1f1f1;
-            color: #333;
-            padding: 0.4rem 1rem;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 0.3rem 1rem;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.8px;
         }
         .article-description {
             font-size: 1.2rem;
-            color: #666;
-            font-style: italic;
+            color: #555;
             margin-top: 1rem;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
         }
+        /* Full-bleed image */
         .article-featured-image {
             width: 100%;
-            max-width: 800px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-            margin: 2rem 0;
+            max-width: 100%;
+            height: 480px;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            display: block;
+            border-radius: 0;
+            margin: 0;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
         }
-        .article-featured-image:hover { transform: scale(1.02); }
-        .article-content h2 {
+        /* Readable body column */
+        .article-body {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        .article-body h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin: 3rem 0 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e5e5;
+        }
+        .article-body h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
             font-weight: 600;
             color: #333;
-            margin: 2.5rem 0 1.5rem 0;
+            margin: 2rem 0 0.8rem;
         }
-        .article-content h3 {
+        .article-body h4 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #333;
-            margin: 2rem 0 1rem 0;
-        }
-        .article-content h4 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             color: #555;
-            margin: 1.5rem 0 0.8rem 0;
+            margin: 1.5rem 0 0.6rem;
         }
-        .article-content p { margin-bottom: 1.5rem; color: #444; }
-        .article-content blockquote {
+        .article-body p { margin-bottom: 1.4rem; color: #444; }
+        .article-body blockquote {
             background: #f8f9fa;
-            border-left: 4px solid #333;
-            padding: 1.5rem;
+            border-left: 4px solid #1a1a2e;
+            padding: 1.2rem 1.5rem;
             margin: 2rem 0;
             font-style: italic;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             border-radius: 0 8px 8px 0;
-            color: #444;
+            color: #333;
         }
-        .article-content ol, .article-content ul {
-            margin-bottom: 1.5rem;
+        .article-body ol, .article-body ul {
+            margin-bottom: 1.4rem;
             padding-left: 2rem;
         }
-        .article-content li { margin-bottom: 0.8rem; color: #444; }
-        .article-content strong { color: #333; font-weight: 600; }
-        .article-content em { color: #666; }
-        .article-content pre {
-            background: #1e1e1e;
-            color: #d4d4d4;
+        .article-body li { margin-bottom: 0.7rem; color: #444; }
+        .article-body strong { color: #1a1a2e; font-weight: 700; }
+        .article-body em { color: #666; }
+        .article-body pre {
+            background: #1a1a2e;
+            color: #e2e8f0;
             padding: 1.5rem;
             border-radius: 8px;
             overflow-x: auto;
             font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-            margin: 1.5rem 0;
+            font-size: 0.88rem;
+            margin: 1.5rem -2rem;
             line-height: 1.6;
+        }
+        .article-body a { color: #4a5568; font-weight: 600; }
+        /* Wide sections */
+        .donation-section, .sharing-section {
+            max-width: 740px;
+            margin: 2rem auto;
         }
         .callout {
             border-radius: 8px;
@@ -280,18 +301,17 @@
     </nav>
 
     <!-- Article Content -->
-    <main style="margin-top: 80px; padding: 4rem 0;">
-        <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
-                <a href="../index.html#articles" class="back-to-home">
-                    <i class="fas fa-arrow-left"></i> Regresar a Artículos
-                </a>
-                <a href="adopting-generative-ai.html" class="lang-switcher">
-                    <i class="fas fa-globe"></i> Read in English
-                </a>
-            </div>
+    <main style="margin-top: 80px;">
+        <div style="max-width: 900px; margin: 0 auto; padding: 1.5rem 2rem 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <a href="../index.html#articles" class="back-to-home">
+                <i class="fas fa-arrow-left"></i> Regresar a Artículos
+            </a>
+            <a href="adopting-generative-ai.html" class="lang-switcher">
+                <i class="fas fa-globe"></i> Read in English
+            </a>
+        </div>
 
-            <article class="article-content">
+        <article class="article-content">
                 <header class="article-header">
                     <div class="article-meta">
                         <span class="article-category">Inteligencia Artificial</span>
@@ -301,11 +321,9 @@
                     <p class="article-description">Principios, impacto en las personas y los pasos que sigo en mi viaje hacia la adopción responsable de la IA Generativa.</p>
                 </header>
 
-                <div style="text-align: center;">
-                    <img src="../img/articles/article.2026.04.02.png"
-                         alt="Adopción de Inteligencia Artificial Generativa"
-                         class="article-featured-image">
-                </div>
+                <img src="../img/articles/article.2026.04.02.png"
+                     alt="Adopción de Inteligencia Artificial Generativa"
+                     class="article-featured-image">
 
                 <div class="article-body">
 
@@ -478,8 +496,7 @@ Responsabilidades:
                     </ul>
                 </div>
 
-            </article>
-        </div>
+        </article>
     </main>
 
     <!-- Footer -->

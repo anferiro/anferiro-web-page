@@ -4,19 +4,31 @@ const translations = {
     // Navigation
     nav: {
       home: "Home",
-      bio: "Bio",
+      bio: "About",
       articles: "Articles",
-      quotes: "Quotes",
-      spiritual: "Spiritual",
       contact: "Contact"
     },
-    
+
+    // Featured article
+    featured: {
+      label: "Latest Article"
+    },
+
+    // Filter tabs
+    filter: {
+      all: "All",
+      ai: "AI",
+      architecture: "Architecture",
+      leadership: "Leadership"
+    },
+
     // Hero Section
     hero: {
-      motto: "Be a better version of myself everyday",
+      tagline: "Engineering Manager · Solution Architect · 20+ yrs",
+      motto: "\"Be a better version of myself every day\"",
       name: "Andres Rincon",
-      subtitle: "Developer • Architect • Leader • Manager",
-      description: "Passionate technologist leading fintech innovation with 20+ years' experience. Committed to transforming the world responsibly through AI.",
+      subtitle: "I help teams build better software through AI, architecture, and principled leadership.",
+      description: "Based in fintech, committed to responsible AI adoption and turning complexity into clarity.",
       readArticles: "Read Articles",
       getInTouch: "Get In Touch"
     },
@@ -132,19 +144,31 @@ const translations = {
     // Navigation
     nav: {
       home: "Inicio",
-      bio: "Bio",
+      bio: "Sobre mí",
       articles: "Artículos",
-      quotes: "Citas",
-      spiritual: "Espiritual",
       contact: "Contacto"
     },
-    
+
+    // Featured article
+    featured: {
+      label: "Último Artículo"
+    },
+
+    // Filter tabs
+    filter: {
+      all: "Todos",
+      ai: "IA",
+      architecture: "Arquitectura",
+      leadership: "Liderazgo"
+    },
+
     // Hero Section
     hero: {
-      motto: "Ser una mejor versión de mí mismo cada día",
+      tagline: "Engineering Manager · Arquitecto de Soluciones · 20+ años",
+      motto: "\"Ser una mejor versión de mí mismo cada día\"",
       name: "Andres Rincon",
-      subtitle: "Desarrollador • Arquitecto • Líder • Manager",
-      description: "Tecnólogo apasionado liderando la innovación fintech con más de 20 años de experiencia. Comprometido a transformar el mundo de manera responsable a través de la IA.",
+      subtitle: "Ayudo a equipos a construir mejor software a través de IA, arquitectura y liderazgo con principios.",
+      description: "Con base en fintech, comprometido con la adopción responsable de IA y con convertir la complejidad en claridad.",
       readArticles: "Leer Artículos",
       getInTouch: "Contactarme"
     },

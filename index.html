@@ -54,11 +54,8 @@
         <span></span>
       </div>
       <div class="nav-menu" id="nav-menu">
-        <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
-        <a href="#bio" class="nav-link" data-i18n="nav.bio">Bio</a>
+        <a href="#bio" class="nav-link" data-i18n="nav.bio">About</a>
         <a href="#articles" class="nav-link" data-i18n="nav.articles">Articles</a>
-        <a href="#quotes" class="nav-link" data-i18n="nav.quotes">Quotes</a>
-        <a href="#keep-me-real" class="nav-link" data-i18n="nav.spiritual">Spiritual</a>
         <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
         <button id="language-toggle" class="language-toggle" title="Cambiar idioma / Switch language">ES</button>
       </div>
@@ -70,15 +67,15 @@
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-text">
-          <h1 class="hero-motto" data-i18n="hero.motto">Be a better version of myself everyday</h1>
-          <h2 class="hero-name" data-i18n="hero.name">Andres Rincon</h2>
-          <p class="hero-subtitle" data-i18n="hero.subtitle">Developer • Architect • Leader • Manager</p>
-          <p class="hero-description" data-i18n="hero.description">Passionate technologist leading fintech innovation with 20+ years' experience. Committed to transforming the world responsibly through AI.</p>
+          <p class="hero-tagline" data-i18n="hero.tagline">Engineering Manager · Solution Architect · 20+ yrs</p>
+          <h1 class="hero-name" data-i18n="hero.name">Andres Rincon</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">I help teams build better software through AI, architecture, and principled leadership.</p>
+          <p class="hero-description" data-i18n="hero.description">Based in fintech, committed to responsible AI adoption and turning complexity into clarity.</p>
           <div class="hero-buttons">
             <a href="#articles" class="btn btn-primary" data-i18n="hero.readArticles">Read Articles</a>
             <a href="#contact" class="btn btn-secondary" data-i18n="hero.getInTouch">Get In Touch</a>
           </div>
-          <!-- Visitor tracking now handled by Google Analytics -->
+          <p class="hero-motto" data-i18n="hero.motto">"Be a better version of myself every day"</p>
         </div>
         <div class="hero-image">
           <div class="image-container">
@@ -89,67 +86,47 @@
     </div>
   </section>
 
+  <!-- Featured Article -->
+  <section class="featured-article">
+    <div class="container">
+      <div class="featured-inner">
+        <div class="featured-image-wrap">
+          <img src="img/articles/article.2026.04.02.png" alt="How to Adopt Gen AI?" class="featured-img">
+        </div>
+        <div class="featured-text">
+          <span class="featured-label" data-i18n="featured.label">Latest Article</span>
+          <span class="featured-category" data-i18n="articles.aiCategory">Artificial Intelligence</span>
+          <h2 class="featured-title" data-i18n="articles.adoptingGenAITitle">How to Adopt Gen AI?</h2>
+          <p class="featured-excerpt" data-i18n="articles.adoptingGenAIExcerpt">Principles, human impact, and the steps I follow in my journey toward responsible adoption of Generative AI.</p>
+          <div class="featured-links">
+            <a href="articles/adopting-generative-ai.html" class="btn btn-primary" data-i18n="articles.readFullArticle">Read Full Article</a>
+            <a href="articles/adopcion-ia-generativa.html" class="featured-link-alt" data-i18n="articles.readInSpanish">Leer en Español →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Bio Section -->
   <section id="bio" class="bio">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title" data-i18n="bio.title">About Me</h2>
-        <p class="section-subtitle" data-i18n="bio.subtitle">My journey, philosophy, and expertise</p>
-      </div>
-      
-      <div class="bio-hero-content">
+      <div class="bio-compact">
         <div class="bio-image">
-          <img src="img/bio-photo.jpg" alt="Andres Rincon - Biography Photo" class="bio-photo">
+          <img src="img/bio-photo.jpg" alt="Andres Rincon" class="bio-photo">
         </div>
-        <div class="bio-text-intro">
-          <h3 class="bio-intro-title" data-i18n="bio.introTitle">Passionate Technologist & Innovation Leader</h3>
-          <p class="bio-intro-description" data-i18n="bio.introDescription">
-            With over 20 years of experience in technology and financial services, I've dedicated my career to transforming ideas into reality through innovative software solutions. My journey began as a developer, driven by curiosity and a passion for solving complex problems through code.
-          </p>
-        </div>
-      </div>
-
-      <div class="bio-content">
-        <div class="philosophy-section">
-          <h3 class="bio-section-title" data-i18n="bio.philosophyTitle">Philosophy & Values</h3>
-          <div class="philosophy-grid">
-            <div class="philosophy-card">
-              <i class="fas fa-rocket"></i>
-              <h4 data-i18n="bio.continuousGrowth">Continuous Growth</h4>
-              <p data-i18n="bio.continuousGrowthDesc">I believe in being a better version of myself every day, constantly learning and adapting to new challenges and technologies.</p>
-            </div>
-            <div class="philosophy-card">
-              <i class="fas fa-users"></i>
-              <h4 data-i18n="bio.peopleFirst">People First</h4>
-              <p data-i18n="bio.peopleFirstDesc">Technology is powerful, but it's the people behind it that make the real difference. I focus on building and leading high-performing teams.</p>
-            </div>
-            <div class="philosophy-card">
-              <i class="fas fa-shield-alt"></i>
-              <h4 data-i18n="bio.responsibleInnovation">Responsible Innovation</h4>
-              <p data-i18n="bio.responsibleInnovationDesc">In the age of AI, I'm committed to developing technology that transforms the world responsibly and ethically.</p>
-            </div>
+        <div class="bio-text-compact">
+          <h2 class="bio-compact-title" data-i18n="bio.introTitle">Passionate Technologist & Innovation Leader</h2>
+          <p class="bio-compact-desc" data-i18n="bio.introDescription">20+ years turning ideas into software. I started as a developer, grew into architecture and leadership, and now focus on responsible AI adoption in fintech.</p>
+          <div class="bio-tags">
+            <span class="bio-tag" data-i18n="bio.fintech">Fintech</span>
+            <span class="bio-tag" data-i18n="bio.architecture">Architecture</span>
+            <span class="bio-tag" data-i18n="bio.aiTransformation">AI & Transformation</span>
+            <span class="bio-tag" data-i18n="bio.teamLeadership">Team Leadership</span>
           </div>
-        </div>
-
-        <div class="expertise-section">
-          <h3 class="bio-section-title" data-i18n="bio.expertiseTitle">Expertise & Focus Areas</h3>
-          <div class="expertise-grid">
-            <div class="expertise-item">
-              <h4 data-i18n="bio.fintech">Financial Technology</h4>
-              <p data-i18n="bio.fintechDesc">Leading fintech innovation with expertise in payment systems, digital banking, and financial infrastructure.</p>
-            </div>
-            <div class="expertise-item">
-              <h4 data-i18n="bio.architecture">Architecture Design Systems</h4>
-              <p data-i18n="bio.architectureDesc">Developing scalable architecture frameworks and design systems that drive consistency and efficiency across organizations.</p>
-            </div>
-            <div class="expertise-item">
-              <h4 data-i18n="bio.aiTransformation">AI & Digital Transformation</h4>
-              <p data-i18n="bio.aiTransformationDesc">Guiding organizations through digital transformation journeys, leveraging AI and modern technologies responsibly.</p>
-            </div>
-            <div class="expertise-item">
-              <h4 data-i18n="bio.teamLeadership">Team Leadership</h4>
-              <p data-i18n="bio.teamLeadershipDesc">Building and nurturing high-performance engineering teams that deliver exceptional results while maintaining work-life balance.</p>
-            </div>
+          <div class="bio-values">
+            <div class="bio-value"><i class="fas fa-rocket"></i> <span data-i18n="bio.continuousGrowth">Continuous Growth</span></div>
+            <div class="bio-value"><i class="fas fa-users"></i> <span data-i18n="bio.peopleFirst">People First</span></div>
+            <div class="bio-value"><i class="fas fa-shield-alt"></i> <span data-i18n="bio.responsibleInnovation">Responsible Innovation</span></div>
           </div>
         </div>
       </div>
@@ -163,8 +140,15 @@
         <h2 class="section-title" data-i18n="articles.title">My Articles</h2>
         <p class="section-subtitle" data-i18n="articles.subtitle">Insights on Architecture Design Systems and Software Development</p>
       </div>
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all" data-i18n="filter.all">All</button>
+        <button class="filter-tab" data-filter="Artificial Intelligence" data-i18n="filter.ai">AI</button>
+        <button class="filter-tab" data-filter="Architecture" data-i18n="filter.architecture">Architecture</button>
+        <button class="filter-tab" data-filter="Leadership" data-i18n="filter.leadership">Leadership</button>
+      </div>
+
       <div class="articles-grid">
-        <article class="article-card">
+        <article class="article-card" data-category="Artificial Intelligence">
           <div class="article-header">
             <span class="article-category" data-i18n="articles.aiCategory">Artificial Intelligence</span>
             <span class="article-date">Apr 2, 2026</span>
@@ -177,7 +161,7 @@
           </div>
         </article>
 
-        <article class="article-card">
+        <article class="article-card" data-category="Leadership">
           <div class="article-header">
             <span class="article-category" data-i18n="articles.leadershipCategory">Leadership</span>
             <span class="article-date">Jun 11, 2025</span>
@@ -191,7 +175,7 @@
           </div>
         </article>
         
-        <article class="article-card">
+        <article class="article-card" data-category="Architecture">
           <div class="article-header">
             <span class="article-category" data-i18n="articles.category">Architecture</span>
             <span class="article-date">Jun 4, 2025</span>
@@ -201,7 +185,7 @@
           <a href="https://anferiro.medium.com/ba56be95ab48" class="article-link" target="_blank" data-i18n="articles.readOnMedium">Read on Medium</a>
         </article>
         
-        <article class="article-card">
+        <article class="article-card" data-category="Architecture">
           <div class="article-header">
             <span class="article-category" data-i18n="articles.category">Architecture</span>
             <span class="article-date">Jan 25, 2024</span>
@@ -211,7 +195,7 @@
           <a href="https://medium.com/@anferiro/architectural-knockout-building-your-design-system-edbae5edc106" class="article-link" target="_blank" data-i18n="articles.readOnMedium">Read on Medium</a>
         </article>
         
-        <article class="article-card">
+        <article class="article-card" data-category="Architecture">
           <div class="article-header">
             <span class="article-category" data-i18n="articles.category">Architecture</span>
             <span class="article-date">Dec 15, 2023</span>
@@ -221,7 +205,7 @@
           <a href="https://medium.com/@anferiro/components-of-the-architecture-design-system-b6d018f2926e" class="article-link" target="_blank" data-i18n="articles.readOnMedium">Read on Medium</a>
         </article>
         
-        <article class="article-card">
+        <article class="article-card" data-category="Architecture">
           <div class="article-header">
             <span class="article-category" data-i18n="articles.category">Architecture</span>
             <span class="article-date">Dec 5, 2023</span>
@@ -392,8 +376,8 @@
   <section id="contact" class="contact">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title" data-i18n="contact.title">Let's Connect</h2>
-        <p class="section-subtitle" data-i18n="contact.subtitle">Ready to start a conversation?</p>
+        <h2 class="section-title" data-i18n="contact.title">Let's build something together.</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">Whether it's AI, architecture, or leadership — I'm always open to a good conversation.</p>
       </div>
       <div class="contact-content">
         <div class="contact-info">
@@ -437,6 +421,23 @@
 
   <script src="js/translations.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    // Category filter
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabs = document.querySelectorAll('.filter-tab');
+      const cards = document.querySelectorAll('.article-card');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          tabs.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+          const filter = this.dataset.filter;
+          cards.forEach(card => {
+            card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+          });
+        });
+      });
+    });
+  </script>
   <script>
     // Initialize language system for index.html
     document.addEventListener('DOMContentLoaded', function() {

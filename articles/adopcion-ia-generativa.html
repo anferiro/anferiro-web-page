@@ -274,6 +274,92 @@
             .sharing-links { flex-direction: column; align-items: center; }
             .lang-switcher { float: none; display: flex; margin-bottom: 1rem; }
         }
+
+        /* ── Table of Contents Sidebar ── */
+        .toc-sidebar {
+            position: fixed;
+            left: 1.25rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 200;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.4rem;
+        }
+        .toc-toggle {
+            background: #1a1a2e;
+            color: white;
+            border: none;
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: background 0.2s;
+            flex-shrink: 0;
+        }
+        .toc-toggle:hover { background: #2d2d50; }
+        .toc-panel {
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+            padding: 0.75rem 0.9rem;
+            width: 195px;
+            max-height: 65vh;
+            overflow-y: auto;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+            transition: opacity 0.2s, transform 0.2s;
+        }
+        .toc-panel.toc-hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(-8px);
+        }
+        .toc-panel p.toc-heading {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #aaa;
+            margin: 0 0 0.5rem;
+        }
+        .toc-panel ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc-panel li { margin-bottom: 0.1rem; }
+        .toc-panel a {
+            display: block;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.78rem;
+            line-height: 1.4;
+            padding: 0.25rem 0.5rem;
+            border-left: 2px solid transparent;
+            border-radius: 0 4px 4px 0;
+            transition: all 0.2s;
+        }
+        .toc-panel a:hover { color: #1a1a2e; background: #f5f5fa; }
+        .toc-panel a.toc-active {
+            color: #1a1a2e;
+            border-left-color: #1a1a2e;
+            background: #f0f0f8;
+            font-weight: 600;
+        }
+        .toc-panel li.toc-h3 a {
+            padding-left: 1.1rem;
+            font-size: 0.72rem;
+            color: #888;
+        }
+        .toc-panel li.toc-h3 a.toc-active { color: #1a1a2e; }
+        @media (max-width: 1200px) { .toc-sidebar { display: none; } }
     </style>
 </head>
 
@@ -525,6 +611,92 @@ Responsabilidades:
 
     <script src="../js/translations.js"></script>
     <script src="../js/script.js"></script>
+    <script>
+    /* ── Table of Contents ── */
+    (function () {
+        var headings = Array.from(document.querySelectorAll('.article-body h2, .article-body h3'));
+        if (!headings.length) return;
+
+        // Assign IDs to headings
+        var usedIds = {};
+        headings.forEach(function (h, i) {
+            if (!h.id) {
+                var base = h.textContent.trim()
+                    .toLowerCase()
+                    .replace(/[^a-z0-9\sáéíóúüñ]/g, '')
+                    .trim()
+                    .replace(/\s+/g, '-')
+                    .substring(0, 45);
+                var id = base;
+                if (usedIds[id]) { id = base + '-' + i; }
+                usedIds[id] = true;
+                h.id = id;
+            }
+        });
+
+        // Build sidebar
+        var sidebar = document.createElement('aside');
+        sidebar.className = 'toc-sidebar';
+
+        var btn = document.createElement('button');
+        btn.className = 'toc-toggle';
+        btn.innerHTML = '&#9776;';
+        btn.setAttribute('aria-label', 'Abrir/cerrar tabla de contenidos');
+        sidebar.appendChild(btn);
+
+        var panel = document.createElement('div');
+        panel.className = 'toc-panel';
+
+        var label = document.createElement('p');
+        label.className = 'toc-heading';
+        label.textContent = 'Contenido';
+        panel.appendChild(label);
+
+        var ul = document.createElement('ul');
+        headings.forEach(function (h) {
+            var li = document.createElement('li');
+            li.className = h.tagName === 'H3' ? 'toc-h3' : 'toc-h2';
+            var a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.textContent = h.textContent;
+            a.addEventListener('click', function (e) {
+                e.preventDefault();
+                var top = h.getBoundingClientRect().top + window.scrollY - 90;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            });
+            li.appendChild(a);
+            ul.appendChild(li);
+        });
+        panel.appendChild(ul);
+        sidebar.appendChild(panel);
+        document.body.appendChild(sidebar);
+
+        // Toggle open/close — starts open
+        var isOpen = true;
+        function applyState() {
+            panel.classList.toggle('toc-hidden', !isOpen);
+            btn.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+            btn.setAttribute('aria-expanded', isOpen);
+        }
+        applyState();
+        btn.addEventListener('click', function () {
+            isOpen = !isOpen;
+            applyState();
+        });
+
+        // Scroll spy
+        var links = Array.from(panel.querySelectorAll('a'));
+        window.addEventListener('scroll', function () {
+            var current = '';
+            headings.forEach(function (h) {
+                if (window.scrollY >= h.offsetTop - 110) { current = h.id; }
+            });
+            links.forEach(function (a) {
+                a.classList.toggle('toc-active', a.getAttribute('href') === '#' + current);
+            });
+        }, { passive: true });
+    })();
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Nav links redirect to main page sections

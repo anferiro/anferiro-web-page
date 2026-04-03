@@ -26,6 +26,7 @@ const translations = {
     hero: {
       tagline: "Engineering Manager · Solution Architect · 20+ yrs",
       motto: "\"Be a better version of myself every day\"",
+      purpose: "To inspire others, break barriers and build bridges that bear witness to excellence — teaching about Christ, Technology, Leadership and Life, while growing through every process and experience.",
       name: "Andres Rincon",
       subtitle: "I help teams build better software through AI, architecture, and principled leadership.",
       description: "Based in fintech, committed to responsible AI adoption and turning complexity into clarity.",
@@ -166,6 +167,7 @@ const translations = {
     hero: {
       tagline: "Engineering Manager · Arquitecto de Soluciones · 20+ años",
       motto: "\"Ser una mejor versión de mí mismo cada día\"",
+      purpose: "Inspirar a otros, romper barreras y crear puentes que den testimonio de excelencia y me permitan enseñar de Cristo, Tecnología, Liderazgo y la Vida, mientras crezco en cada proceso y experiencia.",
       name: "Andres Rincon",
       subtitle: "Ayudo a equipos a construir mejor software a través de IA, arquitectura y liderazgo con principios.",
       description: "Con base en fintech, comprometido con la adopción responsable de IA y con convertir la complejidad en claridad.",

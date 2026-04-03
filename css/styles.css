@@ -182,6 +182,17 @@ body {
   max-width: 480px;
 }
 
+.hero-purpose {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #666;
+  border-left: 3px solid #1a1a2e;
+  padding-left: 0.9rem;
+  margin-bottom: 1.8rem;
+  max-width: 480px;
+  font-style: italic;
+}
+
 .hero-motto {
   font-size: 0.95rem;
   font-style: italic;

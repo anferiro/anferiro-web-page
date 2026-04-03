@@ -55,7 +55,7 @@ const translations = {
       leadershipCategory: "Leadership",
       aiCategory: "Artificial Intelligence",
       // Article titles and excerpts
-      adoptingGenAITitle: "Adopting Generative Artificial Intelligence",
+      adoptingGenAITitle: "How to Adopt Gen AI?",
       adoptingGenAIExcerpt: "Principles, human impact, and the steps I follow in my journey toward responsible adoption of Generative AI.",
       readInSpanish: "Leer en Español",
       redMeetingMadnessTitle: "Stop the Red Meeting Madness: Reclaim Your Time",
@@ -183,7 +183,7 @@ const translations = {
       leadershipCategory: "Liderazgo",
       aiCategory: "Inteligencia Artificial",
       // Article titles and excerpts
-      adoptingGenAITitle: "Adopción de Inteligencia Artificial Generativa",
+      adoptingGenAITitle: "¿Cómo adoptar Inteligencia Artificial Generativa?",
       adoptingGenAIExcerpt: "Principios, impacto en las personas y los pasos que sigo en mi viaje hacia la adopción responsable de la IA Generativa.",
       readInSpanish: "Leer en Español",
       redMeetingMadnessTitle: "Detén la Locura de las Reuniones Rojas: Recupera tu Tiempo",

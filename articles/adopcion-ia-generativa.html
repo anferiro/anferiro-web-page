@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopción de Inteligencia Artificial Generativa | Andres Rincon</title>
+    <meta name="description" content="Cómo adoptar la IA Generativa de forma responsable: principios, impacto en las personas y los pasos que sigo en mi viaje.">
+    <meta name="keywords" content="inteligencia artificial, IA generativa, adopción IA, HUG AI, principios IA, transformación digital, software, liderazgo">
+    <meta name="author" content="Andres Rincon">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Adopción de Inteligencia Artificial Generativa">
+    <meta property="og:description" content="Cómo adoptar la IA Generativa de forma responsable: principios, impacto en las personas y los pasos que sigo en mi viaje.">
+    <meta property="og:image" content="https://anferiro.me/img/articles/article.2026.04.02.png">
+    <meta property="og:url" content="https://anferiro.me/articles/adopcion-ia-generativa.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Andres Rincon">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adopción de Inteligencia Artificial Generativa">
+    <meta name="twitter:description" content="Cómo adoptar la IA Generativa de forma responsable: principios, impacto en las personas y los pasos que sigo en mi viaje.">
+    <meta name="twitter:image" content="https://anferiro.me/img/articles/article.2026.04.02.png">
+    <meta name="twitter:creator" content="@anferiro">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/avatar.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPHDSLX8CC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-BPHDSLX8CC');
+    </script>
+
+    <style>
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .article-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .article-date { color: #666; font-size: 0.95rem; }
+        .article-category {
+            background: #f1f1f1;
+            color: #333;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .article-description {
+            font-size: 1.2rem;
+            color: #666;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+        .article-featured-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .article-featured-image:hover { transform: scale(1.02); }
+        .article-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
+            margin: 2.5rem 0 1.5rem 0;
+        }
+        .article-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #333;
+            margin: 2rem 0 1rem 0;
+        }
+        .article-content h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #555;
+            margin: 1.5rem 0 0.8rem 0;
+        }
+        .article-content p { margin-bottom: 1.5rem; color: #444; }
+        .article-content blockquote {
+            background: #f8f9fa;
+            border-left: 4px solid #333;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.05rem;
+            border-radius: 0 8px 8px 0;
+            color: #444;
+        }
+        .article-content ol, .article-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        .article-content li { margin-bottom: 0.8rem; color: #444; }
+        .article-content strong { color: #333; font-weight: 600; }
+        .article-content em { color: #666; }
+        .article-content pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 1.5rem 0;
+            line-height: 1.6;
+        }
+        .callout {
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+        }
+        .callout-important {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+        }
+        .callout-info {
+            background: #e8f4fd;
+            border-left: 4px solid #0d6efd;
+            font-style: italic;
+        }
+        .callout-label {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+        .lang-switcher {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #333;
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.3s;
+            margin-bottom: 2rem;
+            float: right;
+        }
+        .lang-switcher:hover { background: #000; color: white; }
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        .back-to-home:hover { color: #000; transform: translateX(-5px); }
+        .sharing-section {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .sharing-section h3 { margin-bottom: 1rem; color: #333; }
+        .sharing-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .sharing-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .sharing-links a:hover { background: #000; transform: translateY(-2px); }
+        .donation-section {
+            margin-top: 3rem;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+        .donation-section h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 0.8rem;
+        }
+        .donation-section p { color: #666; margin-bottom: 1.5rem; }
+        .nav-logo a { color: inherit; text-decoration: none; }
+        .nav-logo a:hover { color: inherit; }
+        @media (max-width: 768px) {
+            .article-title { font-size: 2rem; }
+            .article-content { padding: 1rem; }
+            .article-meta { flex-direction: column; gap: 1rem; }
+            .sharing-links { flex-direction: column; align-items: center; }
+            .lang-switcher { float: none; display: flex; margin-bottom: 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">anferiro</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span><span></span><span></span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="../index.html#home" class="nav-link" data-i18n="nav.home">Inicio</a>
+                <a href="../index.html#bio" class="nav-link" data-i18n="nav.bio">Bio</a>
+                <a href="../index.html#articles" class="nav-link" data-i18n="nav.articles">Artículos</a>
+                <a href="../index.html#quotes" class="nav-link" data-i18n="nav.quotes">Citas</a>
+                <a href="../index.html#keep-me-real" class="nav-link" data-i18n="nav.spiritual">Espiritual</a>
+                <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contacto</a>
+                <button id="language-toggle" class="language-toggle" title="Switch language">ES</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <main style="margin-top: 80px; padding: 4rem 0;">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+                <a href="../index.html#articles" class="back-to-home">
+                    <i class="fas fa-arrow-left"></i> Regresar a Artículos
+                </a>
+                <a href="adopting-generative-ai.html" class="lang-switcher">
+                    <i class="fas fa-globe"></i> Read in English
+                </a>
+            </div>
+
+            <article class="article-content">
+                <header class="article-header">
+                    <div class="article-meta">
+                        <span class="article-category">Inteligencia Artificial</span>
+                        <span class="article-date">Abril 2, 2026</span>
+                    </div>
+                    <h1 class="article-title">Adopción de Inteligencia Artificial Generativa</h1>
+                    <p class="article-description">Principios, impacto en las personas y los pasos que sigo en mi viaje hacia la adopción responsable de la IA Generativa.</p>
+                </header>
+
+                <div style="text-align: center;">
+                    <img src="../img/articles/article.2026.04.02.png"
+                         alt="Adopción de Inteligencia Artificial Generativa"
+                         class="article-featured-image"
+                         onerror="this.style.display='none'">
+                </div>
+
+                <div class="article-body">
+
+                    <p>¡Qué locura es la IA, especialmente la IA Generativa! Está definitivamente cambiando todo, especialmente cómo hacemos software. Es apasionante, pero al mismo tiempo inquietante.</p>
+
+                    <p>Hace unas semanas, y después de muchos intentos, me dejé llevar por la pasión de aprender y ahondé profundamente, y no he podido parar. Confirmo que el uso de la IA también me da más horas de trabajo; este tema me tiene completamente absorto. Por esto hoy hago un alto en el camino para descargar mi mente y poder seguir avanzando. ¡Y qué mejor manera de hacerlo que compartiendo con ustedes mi viaje!</p>
+
+                    <div class="callout callout-important">
+                        <div class="callout-label">⚠️ Importante</div>
+                        Este artículo fue editado con IA pero fue escrito entera e inicialmente por mí, en idioma español y, para una mayor cobertura, traducido al inglés. La edición fue sin entregar todo el contexto, buscando un mejor entendimiento, pero no que la IA sea el autor.
+                    </div>
+
+                    <p>Qué época tan emocionante, y qué privilegio poder ser parte de este cambio tecnológico y cultural que está marcando una nueva era en la humanidad. La forma en que manejamos la información, aprendemos, nos comunicamos y hacemos negocios está evolucionando a un ritmo sin precedentes, llevándonos a romper límites y redefinir estándares y paradigmas que creíamos inamovibles.</p>
+
+                    <p>En este artículo quiero contarles cómo he venido asumiendo el reto, qué principios han aparecido y qué pasos siguen en mi camino.</p>
+
+                    <h2>Impacto en las personas</h2>
+
+                    <p>Hay un cambio de expectativas que debemos adoptar para permitir una mejor evolución y un menor impacto social cuando adoptamos IA. Debemos aceptar el hecho de que en tecnología, el estándar ha subido: el conocimiento por sí mismo ya no es el único activo ni el más importante. Se puede dar por hecho que se tiene y que, si no se tiene, fácilmente se cuenta con modelos LLM de nivel PhD para obtenerlo. Por lo tanto, lo que nos debe distinguir es la excelencia, el conocimiento contextualizado y aplicado al negocio, la empatía hacia las personas, la capacidad de remover trade-offs como seguridad y velocidad, o calidad y velocidad, y entregar más en el mismo tiempo o menos.</p>
+
+                    <p>Mi mayor consejo es que debemos cambiar nuestro <em>mindset</em>. Hoy en día, importan más que nunca la actitud, la empatía y la resiliencia. Puntualmente, debemos buscar:</p>
+
+                    <ul>
+                        <li>Quitarnos el miedo a cambiar: desacomódense, dejen de resistirse.</li>
+                        <li>Desaprender rápido y aprender mejor con IA.</li>
+                        <li>No tener miedo a equivocarse. Equivóquense, pero rápido y de forma controlada.</li>
+                        <li>El valor que entregan ya no puede ser solo técnico; deben aprender del negocio sí o sí.</li>
+                        <li>Acostúmbrense a que el valor que entregan se mide todo el tiempo.</li>
+                        <li>Desafiar el <em>status quo</em>.</li>
+                        <li>Tener una enorme curiosidad por cambiar sus flujos de trabajo y permitir que la IA los ayude.</li>
+                    </ul>
+
+                    <p>Los cambios más relevantes inician de adentro hacia afuera. Acepta que debes cambiar e inicia tu viaje hoy.</p>
+
+                    <h2>Principios</h2>
+
+                    <p>Al preguntarme cómo adoptar de forma responsable la IA Generativa, definí un conjunto de principios que gobiernan la adopción responsable del cambio.</p>
+
+                    <h3>1. No reemplazo de Humanos</h3>
+
+                    <div class="callout callout-info">
+                        <div class="callout-label">💡 Principio</div>
+                        La inteligencia artificial no debe reemplazar a los humanos, debe elevarlos y multiplicar sus capacidades.
+                    </div>
+
+                    <p>Debemos entender que, como humanos, no podemos ni debemos confiar ciegamente en todo lo que genera la IA. Su verdadero valor no está en reemplazar nuestro juicio, sino en actuar como un acelerador de capacidades y como una herramienta poderosa para crecer, aprender, analizar más rápido y ejecutar mejor.</p>
+
+                    <p>Sin embargo, la velocidad que aporta la IA no elimina la necesidad de criterio humano; al contrario, la hace aún más importante. Seguimos necesitando personas capaces de interpretar el contexto, cuestionar los resultados, identificar riesgos, reconocer matices éticos y tomar decisiones responsables.</p>
+
+                    <p>La IA puede proponer, resumir, inferir y sugerir caminos, pero la responsabilidad sobre la decisión final no debe recaer únicamente en el modelo. Debe mantenerse en las personas y en las organizaciones que lo usan.</p>
+
+                    <p>Por eso, más que aceptar respuestas automáticas, debemos exigir trazabilidad en el razonamiento: entender con qué información se construyó una recomendación, qué supuestos la sostienen, qué limitaciones tiene y qué nivel de confianza merece. No se trata solo de usar IA, sino de usarla con supervisión, criterio y capacidad de validación.</p>
+
+                    <h3>2. El humano en el ciclo de decisión</h3>
+
+                    <p>El ser humano mantiene la autoridad final sobre las decisiones críticas, pudiendo aceptar, rechazar o solicitar revisiones a las propuestas de la IA.</p>
+
+                    <pre>ANTES: Developer = Coder
+AHORA: Developer = AI Governor
+
+Responsabilidades:
+├── Definir la visión y prioridades
+├── Aprobar/rechazar propuestas de agentes
+├── Validar calidad en quality gates
+├── Proveer contexto de negocio que la IA no tiene
+└── Decisiones arquitectónicas estratégicas</pre>
+
+                    <h4>Principios de HUG AI (Human-Governed AI)</h4>
+
+                    <p><a href="https://github.com/hugaidev/hugai" target="_blank">HUG AI</a> es una metodología de código abierto que provee un marco estructurado para diseñar, desarrollar y mantener soluciones impulsadas por IA, con el humano como eje central del proceso. Su premisa es simple: no reemplazar al desarrollador, sino multiplicar sus capacidades.</p>
+
+                    <ol>
+                        <li><strong>Colaboración Humano-IA</strong> — No reemplazo, multiplicación</li>
+                        <li><strong>Calidad sobre velocidad</strong> — Priorizar seguridad y mantenibilidad</li>
+                        <li><strong>Context-Aware</strong> — Los agentes necesitan contexto para funcionar</li>
+                        <li><strong>Aprendizaje continuo</strong> — Los agentes mejoran con feedback humano</li>
+                    </ol>
+
+                    <h4>Gates de Aprobación</h4>
+
+                    <p>Debemos definir en qué punto los humanos intervienen y qué aprobaciones buscamos. Estas aprobaciones deben estar completamente documentadas y almacenadas para procesos de auditoría.</p>
+
+                    <pre>[Spec] → ✅ Arquitecto aprueba → [Diseño] → ✅ CTO aprueba (Cambio disruptivo) →
+[Código] → ✅ Lead aprueba → [Tests] → ✅ QA aprueba →
+[Security] → ✅ SecOps aprueba → ✅ CISO autoriza → [Deploy]</pre>
+
+                    <h3>3. Trazabilidad de extremo a extremo</h3>
+                    <p>Todo proceso soportado por IA debe contar con trazabilidad completa. Esto implica registrar de forma estructurada los <em>prompts</em> utilizados, las fuentes consultadas, la versión del modelo, las salidas generadas, las intervenciones humanas y la decisión final tomada.</p>
+                    <p>Sin trazabilidad no hay gobierno real sobre el uso de IA.</p>
+
+                    <h3>4. Todo como código</h3>
+                    <p>Para operar sistemas agénticos con control real, debemos tratar como código todo aquello que define su comportamiento: infraestructura, configuraciones, <em>prompts</em>, reglas, políticas, flujos y criterios de aprobación. Esto permite versionar, revisar, probar, auditar y desplegar cambios de forma segura y repetible.</p>
+
+                    <h3>5. Reversibilidad operativa</h3>
+                    <p>Toda salida automatizada debe poder corregirse o revertirse de forma controlada, con un responsable asignado, criterios claros de activación y evidencia completa de la intervención realizada. Sin reversibilidad, no hay control operativo real sobre sistemas agénticos o de IA.</p>
+
+                    <h3>6. Calidad equivalente o superior</h3>
+                    <p>Toda entrega asistida por IA debe cumplir, como mínimo, los mismos estándares de revisión, pruebas, seguridad y calidad exigidos a cualquier entrega no asistida. El uso de IA no reduce controles ni exime responsabilidad.</p>
+
+                    <h3>7. Privacidad y seguridad desde el diseño</h3>
+                    <p>Toda solución soportada por IA debe incorporar privacidad y seguridad desde su diseño. La seguridad y la privacidad no deben agregarse después; deben ser parte estructural de la solución desde el inicio.</p>
+
+                    <h3>8. Transparencia hacia usuarios y partes afectadas</h3>
+                    <p>Cuando una persona interactúe con IA, o cuando un resultado haya sido generado o influido de forma relevante por ella, debe informarse de manera clara y comprensible. La transparencia no es opcional: es una condición básica para proteger la confianza.</p>
+
+                    <h3>9. Contexto antes que automatización</h3>
+                    <p>No se debe automatizar ningún proceso sin contexto suficiente y verificado. Toda automatización debe partir de documentación clara, datos confiables, reglas explícitas y entendimiento del objetivo de negocio.</p>
+
+                    <blockquote>Automatizar sin contexto no acelera el valor: acelera el error.</blockquote>
+
+                    <h3>10. Mejora continua basada en evidencia</h3>
+                    <p>Debemos medir de forma sistemática la calidad, los riesgos y el desempeño de los sistemas y procesos asistidos por IA, recoger retroalimentación de usuarios y equipos, e incorporar esa evidencia en ciclos formales de mejora. Ninguna solución de IA debe considerarse "terminada" o "correcta por defecto".</p>
+                    <p>En otras palabras: no basta con desplegar; hay que observar, medir, aprender y ajustar.</p>
+
+                    <h2>Siguientes Pasos</h2>
+
+                    <p>Los principios que describí en este artículo no son una lista de deseos: son las reglas que me propongo respetar en cada proyecto. El camino no está terminado; lo que sigue es aterrizarlo en acciones concretas.</p>
+
+                    <ol>
+                        <li><strong>Medir el estado de madurez.</strong> Antes de adoptar cualquier herramienta o flujo con IA, necesito entender dónde estoy hoy: qué procesos están documentados, cuáles tienen criterios de calidad definidos y cuáles operan aún sobre conocimiento tácito. Sin esa línea base, cualquier automatización construye sobre arena.</li>
+                        <li><strong>Generar un roadmap priorizado.</strong> Con la madurez medida, el siguiente paso es identificar los puntos de mayor fricción y mayor potencial. El roadmap no es un plan de herramientas, es un plan de impacto de negocio.</li>
+                        <li><strong>Victorias tempranas.</strong> Elegir uno o dos casos de uso concretos, ejecutarlos con los principios aplicados, medir resultados y compartir aprendizajes. Las victorias tempranas son la evidencia que genera confianza organizacional para seguir avanzando.</li>
+                    </ol>
+
+                    <p>Este viaje apenas comienza. Si estás en un proceso similar, me encantaría saber cómo lo estás viviendo.</p>
+
+                </div>
+
+                <!-- Donation Section -->
+                <div class="donation-section">
+                    <h3>☕ ¿Te fue útil este artículo?</h3>
+                    <p>Si este contenido te aportó valor y quieres apoyar que siga generando más, puedes hacerlo con una contribución. Cada aporte ayuda a dedicar más tiempo a investigar, escribir y compartir.</p>
+                    <form>
+                        <script
+                            src="https://checkout.wompi.co/widget.js"
+                            data-render="button"
+                            data-public-key="pub_prod_nWuxLoYbk38rxR1xFvPxFjI6k6zEuIas"
+                            data-currency="COP"
+                            data-amount-in-cents="2000000"
+                            data-reference="articles-anferiro"
+                            data-signature:integrity="18d23daac87eb9788239a909e55368b2d4c88e7dd0fd86135744540290926079"
+                        ></script>
+                    </form>
+                </div>
+
+                <!-- Sharing Section -->
+                <div class="sharing-section">
+                    <h3>Comparte este artículo</h3>
+                    <div class="sharing-links">
+                        <a href="https://twitter.com/intent/tweet?text=Adopci%C3%B3n+de+Inteligencia+Artificial+Generativa&url=https://anferiro.me/articles/adopcion-ia-generativa.html&via=anferiro" target="_blank">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://anferiro.me/articles/adopcion-ia-generativa.html" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="mailto:?subject=Adopci%C3%B3n%20de%20Inteligencia%20Artificial%20Generativa&body=Te%20comparto%20este%20artículo:%20https://anferiro.me/articles/adopcion-ia-generativa.html" target="_blank">
+                            <i class="fas fa-envelope"></i> Email
+                        </a>
+                    </div>
+                </div>
+
+                <!-- References -->
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e5e5;">
+                    <h2>Referencias</h2>
+                    <ul>
+                        <li><a href="https://github.com/hugaidev/hugai" target="_blank">HUG AI Methodology</a> — "We don't automate developers, we multiply them" (2025)</li>
+                        <li>AWS Prescriptive Guidance — AI-Driven SDLC (2024)</li>
+                        <li><a href="https://www.openpolicyagent.org/docs/" target="_blank">Open Policy Agent — Documentación oficial</a></li>
+                    </ul>
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Andres Rincon</h4>
+                    <p>Engineering Manager & Solution Architect</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-links">
+                        <a href="https://linkedin.com/in/anferiro" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/anferiro" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://medium.com/@anferiro" target="_blank"><i class="fab fa-medium"></i></a>
+                        <a href="https://github.com/anferiro" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Andres Rincon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/translations.js"></script>
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const href = this.getAttribute('href');
+                    if (href.startsWith('../index.html#')) {
+                        window.location.href = href;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

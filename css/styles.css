@@ -549,14 +549,15 @@ section {
 }
 
 .bio-photo {
-  width: 280px;
-  height: 280px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
   border: 4px solid white;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .bio-photo:hover {
@@ -924,8 +925,8 @@ section {
   }
   
   .bio-photo {
-    width: 220px;
-    height: 220px;
+    width: 180px;
+    height: 180px;
   }
   
   .bio-intro-title {

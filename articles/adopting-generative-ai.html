@@ -52,6 +52,7 @@
             font-size: 1.1rem;
         }
         .article-header {
+            display: block !important;
             text-align: center;
             margin-bottom: 3rem;
             padding-bottom: 2rem;
@@ -59,11 +60,13 @@
         }
         .article-title {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
+            font-size: 2.5rem !important;
             font-weight: 700;
             color: #333;
             margin-bottom: 1rem;
             line-height: 1.2;
+            letter-spacing: normal !important;
+            transition: none !important;
         }
         .article-meta {
             display: flex;
@@ -300,10 +303,10 @@
                 </header>
 
                 <div style="text-align: center;">
-                    <img src="../img/articles/article.2026.04.02.png"
+                    <!-- TODO: replace with article.2026.04.02.png when image is ready -->
+                    <img src="../img/articles/article.2025.06.11.png"
                          alt="Adopting Generative Artificial Intelligence"
-                         class="article-featured-image"
-                         onerror="this.style.display='none'">
+                         class="article-featured-image">
                 </div>
 
                 <div class="article-body">

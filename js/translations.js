@@ -6,6 +6,7 @@ const translations = {
       home: "Home",
       bio: "About",
       articles: "Articles",
+      quotes: "Quotes",
       contact: "Contact"
     },
 
@@ -100,10 +101,12 @@ const translations = {
       coryHouseQuote: "Code is like humor. When you have to explain it, it's bad.",
       robertGreeneQuote: "The future belongs to those who learn more skills and combine them in creative ways.",
       heraclitusQuote: "Everything changes and nothing stands still",
+      andresSayNoQuote: "Say NO to what you don't want in your life or career — everything that drains your energy.",
       // Categories
       softwareArchitectureCategory: "Software Architecture",
       developmentCategory: "Development",
-      growthCategory: "Growth"
+      growthCategory: "Growth",
+      leadershipCategory: "Leadership"
     },
     
     // Spiritual Section
@@ -147,6 +150,7 @@ const translations = {
       home: "Inicio",
       bio: "Sobre mí",
       articles: "Artículos",
+      quotes: "Enseñanzas",
       contact: "Contacto"
     },
 
@@ -241,10 +245,12 @@ const translations = {
       coryHouseQuote: "El código es como el humor. Cuando tienes que explicarlo, es malo.",
       robertGreeneQuote: "El futuro pertenece a aquellos que aprenden más habilidades y las combinan de maneras creativas.",
       heraclitusQuote: "Todo cambia y nada permanece inmóvil",
+      andresSayNoQuote: "Di NO a lo que no quieres en tu vida o en tu profesión, todo aquello que te roba la energía.",
       // Categories
       softwareArchitectureCategory: "Arquitectura de Software",
       developmentCategory: "Desarrollo",
-      growthCategory: "Crecimiento"
+      growthCategory: "Crecimiento",
+      leadershipCategory: "Liderazgo"
     },
     
     // Spiritual Section

@@ -135,7 +135,28 @@
     ind.style.cursor = 'pointer';
   }
 
-  /* ── 6. Mouse spotlight (Aceternity) ────────────────────────── */
+  /* ── 6. Light / dark theme toggle ───────────────────────────── */
+  function initThemeToggle() {
+    const btn  = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const icon = btn.querySelector('i');
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      if (icon) icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+
+    // Restore saved preference (default: dark)
+    applyTheme(localStorage.getItem('theme') || 'dark');
+
+    btn.addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('theme', next);
+    });
+  }
+
+  /* ── 7. Mouse spotlight (Aceternity) ────────────────────────── */
   function initMouseSpotlight() {
     const hero = document.querySelector('.hero');
     if (!hero) return;
@@ -149,6 +170,7 @@
   /* ── Init ───────────────────────────────────────────────────── */
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
+      initThemeToggle();
       initReveal();
       initRoleCycler();
       initReadingProgress();
@@ -156,6 +178,7 @@
       initMouseSpotlight();
     });
   } else {
+    initThemeToggle();
     initReveal();
     initRoleCycler();
     initReadingProgress();

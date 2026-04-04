@@ -52,18 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navbar background change on scroll
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = 'none';
-        }
-    });
+    // Navbar scroll handled by animations.js via CSS class
 
     // Intersection Observer for animations
     const observerOptions = {
@@ -114,17 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Parallax effect for hero section
-    const hero = document.querySelector('.hero');
-    
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const parallax = scrolled * 0.5;
-        
-        if (hero) {
-            hero.style.transform = `translateY(${parallax}px)`;
-        }
-    });
+    // Hero parallax removed — handled by animated orbs in CSS
 
     // Track article clicks
     const articleLinks = document.querySelectorAll('.article-link');

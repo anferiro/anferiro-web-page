@@ -66,10 +66,21 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
+    <!-- Animated background -->
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-text">
-          <p class="hero-tagline" data-i18n="hero.tagline">Engineering Manager · Solution Architect · 20+ yrs</p>
+          <p class="hero-tagline">
+            <span class="hero-label">–</span>
+            <span class="hero-role">Engineering Manager</span>
+          </p>
           <h1 class="hero-name" data-i18n="hero.name">Andres Rincon</h1>
           <p class="hero-subtitle" data-i18n="hero.subtitle">I help teams build better software through AI, architecture, and principled leadership.</p>
           <p class="hero-description" data-i18n="hero.description">Based in fintech, committed to responsible AI adoption and turning complexity into clarity.</p>
@@ -82,11 +93,15 @@
         </div>
         <div class="hero-image">
           <div class="image-container">
+            <div class="avatar-ring"></div>
+            <div class="avatar-ring-2"></div>
             <img src="img/avatar.png" alt="Andres Rincon" class="profile-img">
           </div>
         </div>
       </div>
     </div>
+
+    <div class="hero-scroll-indicator">scroll</div>
   </section>
 
   <!-- Featured Article -->
@@ -516,6 +531,7 @@
 
   <script src="js/translations.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/animations.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       // === Category filter ===

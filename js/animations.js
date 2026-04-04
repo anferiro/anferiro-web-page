@@ -72,7 +72,7 @@
     if (!el) return;
 
     const roles = [
-      'Engineering Manager',
+      'CTO',
       'Solution Architect',
       'AI Practitioner',
       'Tech Leader',

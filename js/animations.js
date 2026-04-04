@@ -135,17 +135,6 @@
     ind.style.cursor = 'pointer';
   }
 
-  /* ── 6. Mouse spotlight (Aceternity) ────────────────────────── */
-  function initMouseSpotlight() {
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
-    hero.addEventListener('mousemove', (e) => {
-      const rect = hero.getBoundingClientRect();
-      hero.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
-      hero.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
-    });
-  }
-
   /* ── Init ───────────────────────────────────────────────────── */
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
@@ -153,14 +142,12 @@
       initRoleCycler();
       initReadingProgress();
       initScrollIndicator();
-      initMouseSpotlight();
     });
   } else {
     initReveal();
     initRoleCycler();
     initReadingProgress();
     initScrollIndicator();
-    initMouseSpotlight();
   }
 
 })();

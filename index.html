@@ -56,6 +56,7 @@
       <div class="nav-menu" id="nav-menu">
         <a href="#bio" class="nav-link" data-i18n="nav.bio">About</a>
         <a href="#articles" class="nav-link" data-i18n="nav.articles">Articles</a>
+        <a href="#posts" class="nav-link">Posts</a>
         <a href="#quotes" class="nav-link" data-i18n="nav.quotes">Quotes</a>
         <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
         <button id="language-toggle" class="language-toggle" title="Cambiar idioma / Switch language">ES</button>
@@ -141,6 +142,11 @@
       <div class="section-header">
         <h2 class="section-title" data-i18n="articles.title">My Articles</h2>
         <p class="section-subtitle" data-i18n="articles.subtitle">Insights on Architecture Design Systems and Software Development</p>
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="global-search" class="search-input" placeholder="Search articles and posts...">
+          <span id="search-count" class="search-count"></span>
+        </div>
       </div>
       <div class="filter-tabs">
         <button class="filter-tab active" data-filter="all" data-i18n="filter.all">All</button>
@@ -259,6 +265,43 @@
             </div>
           </div>
         </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Posts Section -->
+  <section id="posts" class="posts-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Posts</h2>
+        <p class="section-subtitle">Short thoughts, experiments, and discoveries — straight from the lab</p>
+      </div>
+      <div class="posts-feed" id="posts-feed">
+
+        <div class="post-card" data-searchable data-title="Using AI to Generate Knowledge" data-excerpt="My first ultra deep search with Knowledge Graph + Claude + Neo4j. The graph doesn't just store information — it connects it.">
+          <div class="post-card-header">
+            <div class="post-meta">
+              <span class="post-date">Apr 4, 2026</span>
+              <div class="post-tags">
+                <span class="post-tag">#KnowledgeGraph</span>
+                <span class="post-tag">#Neo4j</span>
+                <span class="post-tag">#Claude</span>
+                <span class="post-tag">#AI</span>
+                <span class="post-tag">#DeepResearch</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-card-body">
+            <h3 class="post-title">Using AI to Generate Knowledge!</h3>
+            <p class="post-text">Amazing, based on the deep-search skill, I created my own version running on Neo4j to store the plan and the result of the research.</p>
+            <p class="post-text">The graph doesn't just store information — <strong>it connects it</strong>. Every relationship emerged from semantic analysis, not hardcoded rules. 81 nodes. 3 relationship types. 0 manual hours.</p>
+            <img src="img/articles/article.2026.04.04.png" alt="Knowledge Graph — Neo4j" class="post-image">
+            <div class="post-actions">
+              <a href="articles/using-ai-to-generate-knowledge.html" class="post-link">Read more →</a>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -474,19 +517,63 @@
   <script src="js/translations.js"></script>
   <script src="js/script.js"></script>
   <script>
-    // Category filter
     document.addEventListener('DOMContentLoaded', function () {
+      // === Category filter ===
       const tabs = document.querySelectorAll('.filter-tab');
-      const cards = document.querySelectorAll('.article-card');
+      const articleCards = document.querySelectorAll('.article-card');
       tabs.forEach(tab => {
         tab.addEventListener('click', function () {
           tabs.forEach(t => t.classList.remove('active'));
           this.classList.add('active');
           const filter = this.dataset.filter;
-          cards.forEach(card => {
+          articleCards.forEach(card => {
             card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
           });
         });
+      });
+
+      // === Global Search ===
+      const searchInput = document.getElementById('global-search');
+      const searchCount = document.getElementById('search-count');
+      const postCards = document.querySelectorAll('.post-card');
+
+      function getText(el, selector) {
+        const node = el.querySelector(selector);
+        return node ? node.textContent.toLowerCase() : '';
+      }
+
+      searchInput.addEventListener('input', function () {
+        const q = this.value.trim().toLowerCase();
+
+        if (!q) {
+          articleCards.forEach(c => c.style.display = '');
+          postCards.forEach(c => c.style.display = '');
+          searchCount.textContent = '';
+          return;
+        }
+
+        let hits = 0;
+
+        articleCards.forEach(card => {
+          const title = getText(card, '.article-title');
+          const excerpt = getText(card, '.article-excerpt');
+          const cat = (card.dataset.category || '').toLowerCase();
+          const match = title.includes(q) || excerpt.includes(q) || cat.includes(q);
+          card.style.display = match ? '' : 'none';
+          if (match) hits++;
+        });
+
+        postCards.forEach(card => {
+          const title = (card.dataset.title || '').toLowerCase();
+          const excerpt = (card.dataset.excerpt || '').toLowerCase();
+          const tags = getText(card, '.post-tags');
+          const body = getText(card, '.post-text');
+          const match = title.includes(q) || excerpt.includes(q) || tags.includes(q) || body.includes(q);
+          card.style.display = match ? '' : 'none';
+          if (match) hits++;
+        });
+
+        searchCount.textContent = hits === 0 ? 'No results' : `${hits} result${hits > 1 ? 's' : ''}`;
       });
     });
   </script>

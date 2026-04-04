@@ -5,9 +5,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Andres Rincon - Developer & Leader</title>
-  <script>document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||'dark')</script>
+  <script>
+    // Apply saved theme before CSS paints (prevents flash)
+    (function(){
+      var t = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+
+    // Global toggle — called via onclick, no DOMContentLoaded dependency
+    function toggleTheme() {
+      var root = document.documentElement;
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      var icon = document.querySelector('#theme-toggle i');
+      if (icon) icon.className = next === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+
+    // Sync icon once DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      var t = document.documentElement.getAttribute('data-theme');
+      var icon = document.querySelector('#theme-toggle i');
+      if (icon) icon.className = t === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+  </script>
   <link href="css/styles.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Figtree:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   
   <!-- Google Analytics 4 -->
@@ -60,7 +83,7 @@
         <a href="#posts" class="nav-link">Posts</a>
         <a href="#quotes" class="nav-link" data-i18n="nav.quotes">Quotes</a>
         <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
-        <button id="theme-toggle" class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+        <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
         <button id="language-toggle" class="language-toggle" title="Cambiar idioma / Switch language">ES</button>
       </div>
     </div>

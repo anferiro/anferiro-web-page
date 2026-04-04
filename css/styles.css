@@ -1172,3 +1172,89 @@ button { font-family: inherit; cursor: pointer; }
   .hero-buttons { flex-direction: column; align-items: center; }
   .btn { padding: 0.72rem 1.2rem; font-size: 0.84rem; }
 }
+
+/* ── 19. Article pages — dark mode overrides ─────────────────── */
+/* html[data-theme="dark"] prefix gives specificity (0,2,1) which
+   beats inline <style> class selectors at (0,1,0), no !important needed */
+html[data-theme="dark"] .article-header {
+  background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  border-bottom: 1px solid var(--border);
+}
+html[data-theme="dark"] .article-title { color: var(--text-1); }
+html[data-theme="dark"] .article-date  { color: var(--text-3); }
+html[data-theme="dark"] .article-description { color: var(--text-2); }
+html[data-theme="dark"] .article-category {
+  background: var(--purple);
+  color: #fff;
+}
+html[data-theme="dark"] .article-body h2 {
+  color: var(--text-1);
+  border-bottom-color: var(--border);
+}
+html[data-theme="dark"] .article-body h3 { color: var(--text-1); }
+html[data-theme="dark"] .article-body h4 { color: var(--text-2); }
+html[data-theme="dark"] .article-body p  { color: var(--text-2); }
+html[data-theme="dark"] .article-body li { color: var(--text-2); }
+html[data-theme="dark"] .article-body strong { color: var(--text-1); }
+html[data-theme="dark"] .article-body em    { color: var(--text-3); }
+html[data-theme="dark"] .article-body a     { color: var(--purple); }
+html[data-theme="dark"] .article-body blockquote {
+  background: var(--surface);
+  border-left-color: var(--purple);
+  color: var(--text-2);
+}
+html[data-theme="dark"] .article-body pre {
+  background: #0d1117;
+  border: 1px solid var(--border);
+}
+html[data-theme="dark"] .callout-important {
+  background: rgba(255,193,7,0.08);
+  border-left-color: #ffc107;
+  color: var(--text-2);
+}
+html[data-theme="dark"] .callout-info {
+  background: rgba(59,130,246,0.08);
+  border-left-color: var(--blue);
+  color: var(--text-2);
+}
+html[data-theme="dark"] .back-to-home { color: var(--text-2); }
+html[data-theme="dark"] .lang-switcher {
+  background: var(--surface-2);
+  color: var(--text-1);
+}
+html[data-theme="dark"] .lang-switcher:hover { background: var(--surface); color: var(--text-1); }
+html[data-theme="dark"] .sharing-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+html[data-theme="dark"] .sharing-section h3 { color: var(--text-1); }
+html[data-theme="dark"] .sharing-links a {
+  background: var(--surface-2);
+  color: var(--text-1);
+  border: 1px solid var(--border);
+}
+html[data-theme="dark"] .sharing-links a:hover { background: var(--purple); border-color: var(--purple); }
+html[data-theme="dark"] .donation-section {
+  background: var(--surface);
+  border-color: var(--border);
+}
+html[data-theme="dark"] .donation-section h3 { color: var(--text-1); }
+html[data-theme="dark"] .donation-section p  { color: var(--text-2); }
+html[data-theme="dark"] .article-references   { color: var(--text-2); }
+
+/* TOC Sidebar */
+html[data-theme="dark"] .toc-toggle { background: var(--surface-2); color: var(--text-1); }
+html[data-theme="dark"] .toc-toggle:hover { background: var(--purple); }
+html[data-theme="dark"] .toc-panel {
+  background: var(--bg-1);
+  border-color: var(--border);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+html[data-theme="dark"] .toc-panel p.toc-heading { color: var(--text-3); }
+html[data-theme="dark"] .toc-panel a { color: var(--text-2); }
+html[data-theme="dark"] .toc-panel a:hover { color: var(--text-1); background: var(--surface); }
+html[data-theme="dark"] .toc-panel a.toc-active {
+  color: var(--purple);
+  border-left-color: var(--purple);
+  background: var(--purple-dim);
+}

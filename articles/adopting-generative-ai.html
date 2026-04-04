@@ -31,6 +31,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+    <!-- Theme (must run before CSS paints) -->
+    <script>
+      (function(){ var t=localStorage.getItem('theme')||'light'; document.documentElement.setAttribute('data-theme',t); })();
+      function toggleTheme(){var r=document.documentElement,n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);localStorage.setItem('theme',n);var i=document.querySelector('#theme-toggle i');if(i)i.className=n==='dark'?'fas fa-sun':'fas fa-moon';}
+      document.addEventListener('DOMContentLoaded',function(){var t=document.documentElement.getAttribute('data-theme');var i=document.querySelector('#theme-toggle i');if(i)i.className=t==='dark'?'fas fa-sun':'fas fa-moon';});
+    </script>
+
     <!-- Styles -->
     <link rel="stylesheet" href="../css/styles.css">
 
@@ -377,6 +384,7 @@
                 <a href="../index.html#bio" class="nav-link" data-i18n="nav.bio">About</a>
                 <a href="../index.html#articles" class="nav-link" data-i18n="nav.articles">Articles</a>
                 <a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
                 <button id="language-toggle" class="language-toggle" title="Cambiar idioma / Switch language">ES</button>
             </div>
         </div>

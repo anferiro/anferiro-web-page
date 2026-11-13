@@ -43,7 +43,7 @@ export function Hero() {
               </motion.span>
             </span>
           </h1>
-          <motion.p className="hero-role" variants={rise}>{t('site.role')} · {t('site.a6')}</motion.p>
+          <motion.p className="hero-role" variants={rise}>{t('site.role')}</motion.p>
           <motion.p className="hero-lead" variants={rise}>{t('hero.subtitle')}</motion.p>
           <motion.p className="hero-sub" variants={rise}>{t('hero.description')}</motion.p>
           <motion.p className="hero-actions" variants={rise}>

@@ -42,7 +42,7 @@ from datetime import datetime
 from pathlib import Path
 
 # ── Paths ────────────────────────────────────────────────────────────────────
-SITE_ROOT = Path(__file__).parent.resolve()
+SITE_ROOT = Path(__file__).resolve().parent.parent / "legacy-static"  # ponytail: genera HTML del sitio viejo; migrar a src/data/content.ts
 ARTICLES_DIR = SITE_ROOT / "articles"
 IMG_DIR = SITE_ROOT / "img" / "articles"
 

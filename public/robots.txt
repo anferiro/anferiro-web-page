@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# AI / generative engine crawlers explicitly welcome
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://anferiro.me/sitemap.xml

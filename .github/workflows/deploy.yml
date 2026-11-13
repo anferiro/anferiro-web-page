@@ -1,0 +1,58 @@
+# Build del static export de Next.js y deploy a S3 + CloudFront (infra en el repo anferiro-infra).
+# Vars del repo (Settings → Secrets and variables → Actions → Variables):
+#   AWS_ROLE_ARN, S3_BUCKET, CF_DISTRIBUTION_ID  (outputs de terraform)
+name: Deploy site
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm audit --omit=dev --audit-level=high
+      - run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: out
+          path: out
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    environment:
+      name: production
+      url: https://anferiro.me
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: out
+          path: out
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: us-east-1
+      # Assets con hash: caché inmutable. HTML y resto: revalidar siempre.
+      - run: aws s3 sync out/_next/static "s3://${{ vars.S3_BUCKET }}/_next/static" --cache-control "public,max-age=31536000,immutable"
+      - run: aws s3 sync out "s3://${{ vars.S3_BUCKET }}" --delete --exclude "_next/static/*" --cache-control "public,max-age=0,must-revalidate"
+      - run: aws cloudfront create-invalidation --distribution-id "${{ vars.CF_DISTRIBUTION_ID }}" --paths "/*"

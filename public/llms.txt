@@ -1,0 +1,19 @@
+# Andres Rincon (anferiro)
+
+> Andres Rincon is a CTO in fintech (Colombia) with 20+ years of experience as developer, architect and engineering leader. He writes about generative AI adoption, architecture design systems, knowledge graphs and principled leadership.
+
+Site: https://anferiro.me — available in English and Spanish.
+
+## Articles
+- [How to Adopt Gen AI?](https://anferiro.me/articles/adopting-generative-ai.html): Responsible adoption of generative AI: principles, human impact and practical steps.
+- [¿Cómo adoptar Inteligencia Artificial Generativa?](https://anferiro.me/articles/adopcion-ia-generativa.html): Spanish version of the above.
+- [Using AI to Generate Knowledge](https://anferiro.me/articles/using-ai-to-generate-knowledge.html): Deep research with a knowledge graph, Claude and Neo4j.
+- [Stop the Red Meeting Madness](https://anferiro.me/articles/red-meeting-madness.html): Strategies to protect your time from unnecessary meetings.
+
+## Elsewhere
+- [Medium](https://anferiro.medium.com)
+- [Substack](https://anferiro.substack.com)
+- [LinkedIn](https://www.linkedin.com/in/anferiro/)
+- [GitHub](https://github.com/anferiro)
+
+Full text: https://anferiro.me/llms-full.txt

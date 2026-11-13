@@ -1,0 +1,355 @@
+# Andres Rincon — full article content
+
+> Source: https://anferiro.me — author Andres Rincon, CTO in fintech.
+
+---
+
+# How to Adopt Gen AI?
+
+URL: https://anferiro.me/articles/adopting-generative-ai.html
+Published: 2026-04-02
+Language: en
+
+Artificial Intelligence April 2, 2026  
+
+# How to Adopt Gen AI? 
+
+Principles, human impact, and the steps I follow in my journey toward responsible adoption of Generative AI.    
+
+What a wild time to be alive — especially with Generative AI reshaping everything, including how we build software. It's exciting and unsettling in equal measure. 
+
+A few weeks ago, after many attempts, I gave in to my curiosity and dove deep. I haven't been able to stop since. I can confirm that AI is giving me more hours of work, not fewer — this topic has me completely absorbed. So today I'm pausing to clear my head and share what I've been learning. And what better way to do that than writing about the journey?  ⚠️ Important This article was edited with AI assistance, but was written entirely and originally by me, in Spanish. It was translated into English for broader reach. The editing process was intentional: I deliberately avoided giving the AI full context, seeking better understanding — not authorship.  
+
+What an exciting era, and what a privilege to be part of this technological and cultural shift that is marking a new era in human history. The way we manage information, learn, communicate, and do business is evolving at an unprecedented pace — pushing us to break limits and redefine standards and paradigms we once thought were fixed. 
+
+In this article I want to share how I've been taking on this challenge, what principles have emerged, and what comes next in my journey. 
+
+## Impact on People  
+
+There is a shift in expectations we must embrace to enable a better evolution and reduce social disruption as we adopt AI. We need to accept the fact that in technology, the bar has been raised: knowledge alone is no longer the primary asset. It can be assumed that anyone has it — and if they don't, PhD-level LLM models are readily available to fill that gap. What must set us apart, then, is excellence, contextualized knowledge applied to the business, empathy toward people, the ability to navigate trade-offs like security vs. speed or quality vs. speed, and the capacity to deliver more in the same or less time. 
+
+My biggest piece of advice: we need to change our mindset. Today, attitude, empathy, and resilience matter more than ever. Specifically, we should:  
+
+- Overcome the fear of change: get uncomfortable, stop resisting. 
+
+- Unlearn fast and learn better with AI. 
+
+- Stop being afraid of failure. Fail — but fast and in a controlled way. 
+
+- The value you deliver can no longer be purely technical; you must learn the business, no excuses. 
+
+- Get used to having your output measured constantly. 
+
+- Challenge the status quo. 
+
+- Cultivate enormous curiosity for redesigning your workflows and letting AI help you.  
+
+The most meaningful changes start from within. Accept that you need to change, and start your journey today. 
+
+## Principles 
+
+When I asked myself how to adopt Generative AI responsibly, I defined a set of principles to govern that change. 
+
+### 1. No Human Replacement  💡 Principle Artificial intelligence must not replace humans — it must elevate them and multiply their capabilities.  
+
+We must understand that, as humans, we cannot and should not blindly trust everything AI generates. Its true value is not in replacing our judgment, but in acting as a capability accelerator — a powerful tool to grow, learn, analyze faster, and execute better. 
+
+However, the speed AI provides does not eliminate the need for human judgment; on the contrary, it makes it even more critical. We still need people who can interpret context, question results, identify risks, recognize ethical nuances, and make responsible decisions. 
+
+AI can propose, summarize, infer, and suggest paths — but the responsibility for the final decision must not rest solely with the model. It must remain with the people and organizations using it. 
+
+This is why, more than accepting automatic outputs, we must demand traceability in the reasoning: understand what information was used to build a recommendation, what assumptions sustain it, what its limitations are, and how much confidence it deserves. It's not just about using AI — it's about using it with oversight, judgment, and the capacity to validate. 
+
+### 2. Human in the Decision Loop 
+
+The human retains final authority over critical decisions — accepting, rejecting, or requesting revisions on AI proposals. BEFORE: Developer = Coder NOW: Developer = AI Governor Responsibilities: ├── Define vision and priorities ├── Approve/reject agent proposals ├── Validate quality at quality gates ├── Provide business context the AI lacks └── Strategic architectural decisions HUG AI Principles (Human-Governed AI) 
+
+HUG AI is an open-source methodology that provides a structured framework for designing, developing, and maintaining AI-driven solutions, with the human as the central axis of the process. Its premise is simple: don't replace the developer — multiply their capabilities.  
+
+- Human-AI Collaboration — Not replacement, multiplication 
+
+- Quality over speed — Prioritize security and maintainability 
+
+- Context-Aware — Agents need context to function 
+
+- Continuous learning — Agents improve with human feedback  Approval Gates 
+
+We must define at which points humans intervene and what approvals we require. These approvals must be fully documented and stored for audit processes, investigations, and quality assurance. [Spec] → ✅ Architect approves → [Design] → ✅ CTO approves (Disruptive change) → [Code] → ✅ Lead approves → [Tests] → ✅ QA approves → [Security] → ✅ SecOps approves → ✅ CISO authorizes → [Deploy] 
+
+### 3. End-to-End Traceability 
+
+Every AI-supported process must have complete traceability. This means structured recording of the prompts used, sources consulted, model version, generated outputs, human interventions, and the final decision made. 
+
+Without traceability, there is no real governance over AI use. 
+
+### 4. Everything as Code 
+
+To operate agentic systems with real control, we must treat everything that defines their behavior as code: infrastructure, configurations, prompts, rules, policies, flows, and approval criteria. This allows us to version, review, test, audit, and deploy changes safely and repeatably. 
+
+### 5. Operational Reversibility 
+
+Every automated output must be correctable or reversible in a controlled way, with an assigned owner, clear activation criteria, and complete evidence of the intervention performed. Without reversibility, there is no real operational control over agentic or AI systems. 
+
+### 6. Equivalent or Superior Quality 
+
+Every AI-assisted delivery must meet, at minimum, the same review, testing, security, and quality standards required of any non-assisted delivery. Using AI does not reduce controls or relieve responsibility. 
+
+### 7. Privacy and Security by Design 
+
+Every AI-supported solution must incorporate privacy and security from the design phase. Security and privacy must not be added later — they must be structural parts of the solution from the start. 
+
+### 8. Transparency Toward Users and Affected Parties 
+
+When a person interacts with AI, or when a result has been generated or significantly influenced by it, this must be communicated clearly and understandably. Transparency is not optional: it is a basic condition for protecting trust. 
+
+### 9. Context Before Automation 
+
+No process should be automated without sufficient and verified context. Every automation must start from clear documentation, reliable data, explicit rules, and a solid understanding of the business objective. 
+
+Automating without context doesn't accelerate value — it accelerates error. 
+
+### 10. Continuous Improvement Based on Evidence 
+
+We must systematically measure the quality, risks, and performance of AI-assisted systems and processes, collect feedback from users and teams, and incorporate that evidence into formal improvement cycles. No AI solution should ever be considered "finished" or "correct by default". 
+
+In other words: deploying is not enough. You must observe, measure, learn, and adjust. 
+
+## Next Steps 
+
+The principles I described in this article are not a wish list — they are the rules I commit to upholding in every project. The road is far from over; what comes next is making them concrete.  
+
+- Measure maturity. Before adopting any AI tool or workflow, I need to understand where I stand today: which processes are documented, which have defined quality criteria, and which still rely on tacit knowledge. Without that baseline, any automation is built on sand. 
+
+- Build a prioritized roadmap. With maturity measured, the next step is identifying the highest-friction, highest-potential points. The roadmap is not a plan of tools — it's a plan of business impact. 
+
+- Early wins. Choose one or two concrete use cases, execute them with the principles applied, measure results, and share learnings. Early wins are the evidence that builds organizational confidence to keep moving forward.  
+
+This journey is just beginning. If you're going through something similar, I'd love to hear how you're experiencing it.    
+
+### Did this article add value? 
+
+If this content was useful, you can show your appreciation with a contribution. Every bit of support helps dedicate more time to researching, writing, and sharing. Gracias ❤️    
+
+### Share this article    Read on Substack    Read on Medium    Twitter    LinkedIn    Email      
+
+## References  
+
+- HUG AI Methodology — "We don't automate developers, we multiply them" (2025) 
+
+- AWS Prescriptive Guidance — AI-Driven SDLC (2024) 
+
+- Open Policy Agent — Official Documentation
+
+---
+
+# ¿Cómo adoptar Inteligencia Artificial Generativa?
+
+URL: https://anferiro.me/articles/adopcion-ia-generativa.html
+Published: 2026-04-02
+Language: es
+
+Inteligencia Artificial Abril 2, 2026  
+
+# ¿Cómo adoptar Inteligencia Artificial Generativa? 
+
+Principios, impacto en las personas y los pasos que sigo en mi viaje hacia la adopción responsable de la IA Generativa.    
+
+¡Qué locura es la IA, especialmente la IA Generativa! Está definitivamente cambiando todo, especialmente cómo hacemos software. Es apasionante, pero al mismo tiempo inquietante. 
+
+Hace unas semanas, y después de muchos intentos, me dejé llevar por la pasión de aprender y ahondé profundamente, y no he podido parar. Confirmo que el uso de la IA también me da más horas de trabajo; este tema me tiene completamente absorto. Por esto hoy hago un alto en el camino para descargar mi mente y poder seguir avanzando. ¡Y qué mejor manera de hacerlo que compartiendo con ustedes mi viaje!  ⚠️ Importante Este artículo fue editado con IA pero fue escrito entera e inicialmente por mí, en idioma español y, para una mayor cobertura, traducido al inglés. La edición fue sin entregar todo el contexto, buscando un mejor entendimiento, pero no que la IA sea el autor.  
+
+Qué época tan emocionante, y qué privilegio poder ser parte de este cambio tecnológico y cultural que está marcando una nueva era en la humanidad. La forma en que manejamos la información, aprendemos, nos comunicamos y hacemos negocios está evolucionando a un ritmo sin precedentes, llevándonos a romper límites y redefinir estándares y paradigmas que creíamos inamovibles. 
+
+En este artículo quiero contarles cómo he venido asumiendo el reto, qué principios han aparecido y qué pasos siguen en mi camino. 
+
+## Impacto en las personas  
+
+Hay un cambio de expectativas que debemos adoptar para permitir una mejor evolución y un menor impacto social cuando adoptamos IA. Debemos aceptar el hecho de que en tecnología, el estándar ha subido: el conocimiento por sí mismo ya no es el único activo ni el más importante. Se puede dar por hecho que se tiene y que, si no se tiene, fácilmente se cuenta con modelos LLM de nivel PhD para obtenerlo. Por lo tanto, lo que nos debe distinguir es la excelencia, el conocimiento contextualizado y aplicado al negocio, la empatía hacia las personas, la capacidad de remover trade-offs como seguridad y velocidad, o calidad y velocidad, y entregar más en el mismo tiempo o menos. 
+
+Mi mayor consejo es que debemos cambiar nuestro mindset. Hoy en día, importan más que nunca la actitud, la empatía y la resiliencia. Puntualmente, debemos buscar:  
+
+- Quitarnos el miedo a cambiar: desacomódense, dejen de resistirse. 
+
+- Desaprender rápido y aprender mejor con IA. 
+
+- No tener miedo a equivocarse. Equivóquense, pero rápido y de forma controlada. 
+
+- El valor que entregan ya no puede ser solo técnico; deben aprender del negocio sí o sí. 
+
+- Acostúmbrense a que el valor que entregan se mide todo el tiempo. 
+
+- Desafiar el status quo. 
+
+- Tener una enorme curiosidad por cambiar sus flujos de trabajo y permitir que la IA los ayude.  
+
+Los cambios más relevantes inician de adentro hacia afuera. Acepta que debes cambiar e inicia tu viaje hoy. 
+
+## Principios 
+
+Al preguntarme cómo adoptar de forma responsable la IA Generativa, definí un conjunto de principios que gobiernan la adopción responsable del cambio. 
+
+### 1. No reemplazo de Humanos  💡 Principio La inteligencia artificial no debe reemplazar a los humanos, debe elevarlos y multiplicar sus capacidades.  
+
+Debemos entender que, como humanos, no podemos ni debemos confiar ciegamente en todo lo que genera la IA. Su verdadero valor no está en reemplazar nuestro juicio, sino en actuar como un acelerador de capacidades y como una herramienta poderosa para crecer, aprender, analizar más rápido y ejecutar mejor. 
+
+Sin embargo, la velocidad que aporta la IA no elimina la necesidad de criterio humano; al contrario, la hace aún más importante. Seguimos necesitando personas capaces de interpretar el contexto, cuestionar los resultados, identificar riesgos, reconocer matices éticos y tomar decisiones responsables. 
+
+La IA puede proponer, resumir, inferir y sugerir caminos, pero la responsabilidad sobre la decisión final no debe recaer únicamente en el modelo. Debe mantenerse en las personas y en las organizaciones que lo usan. 
+
+Por eso, más que aceptar respuestas automáticas, debemos exigir trazabilidad en el razonamiento: entender con qué información se construyó una recomendación, qué supuestos la sostienen, qué limitaciones tiene y qué nivel de confianza merece. No se trata solo de usar IA, sino de usarla con supervisión, criterio y capacidad de validación. 
+
+### 2. El humano en el ciclo de decisión 
+
+El ser humano mantiene la autoridad final sobre las decisiones críticas, pudiendo aceptar, rechazar o solicitar revisiones a las propuestas de la IA. ANTES: Developer = Coder AHORA: Developer = AI Governor Responsabilidades: ├── Definir la visión y prioridades ├── Aprobar/rechazar propuestas de agentes ├── Validar calidad en quality gates ├── Proveer contexto de negocio que la IA no tiene └── Decisiones arquitectónicas estratégicas Principios de HUG AI (Human-Governed AI) 
+
+HUG AI es una metodología de código abierto que provee un marco estructurado para diseñar, desarrollar y mantener soluciones impulsadas por IA, con el humano como eje central del proceso. Su premisa es simple: no reemplazar al desarrollador, sino multiplicar sus capacidades.  
+
+- Colaboración Humano-IA — No reemplazo, multiplicación 
+
+- Calidad sobre velocidad — Priorizar seguridad y mantenibilidad 
+
+- Context-Aware — Los agentes necesitan contexto para funcionar 
+
+- Aprendizaje continuo — Los agentes mejoran con feedback humano  Gates de Aprobación 
+
+Debemos definir en qué punto los humanos intervienen y qué aprobaciones buscamos. Estas aprobaciones deben estar completamente documentadas y almacenadas para procesos de auditoría. [Spec] → ✅ Arquitecto aprueba → [Diseño] → ✅ CTO aprueba (Cambio disruptivo) → [Código] → ✅ Lead aprueba → [Tests] → ✅ QA aprueba → [Security] → ✅ SecOps aprueba → ✅ CISO autoriza → [Deploy] 
+
+### 3. Trazabilidad de extremo a extremo 
+
+Todo proceso soportado por IA debe contar con trazabilidad completa. Esto implica registrar de forma estructurada los prompts utilizados, las fuentes consultadas, la versión del modelo, las salidas generadas, las intervenciones humanas y la decisión final tomada. 
+
+Sin trazabilidad no hay gobierno real sobre el uso de IA. 
+
+### 4. Todo como código 
+
+Para operar sistemas agénticos con control real, debemos tratar como código todo aquello que define su comportamiento: infraestructura, configuraciones, prompts, reglas, políticas, flujos y criterios de aprobación. Esto permite versionar, revisar, probar, auditar y desplegar cambios de forma segura y repetible. 
+
+### 5. Reversibilidad operativa 
+
+Toda salida automatizada debe poder corregirse o revertirse de forma controlada, con un responsable asignado, criterios claros de activación y evidencia completa de la intervención realizada. Sin reversibilidad, no hay control operativo real sobre sistemas agénticos o de IA. 
+
+### 6. Calidad equivalente o superior 
+
+Toda entrega asistida por IA debe cumplir, como mínimo, los mismos estándares de revisión, pruebas, seguridad y calidad exigidos a cualquier entrega no asistida. El uso de IA no reduce controles ni exime responsabilidad. 
+
+### 7. Privacidad y seguridad desde el diseño 
+
+Toda solución soportada por IA debe incorporar privacidad y seguridad desde su diseño. La seguridad y la privacidad no deben agregarse después; deben ser parte estructural de la solución desde el inicio. 
+
+### 8. Transparencia hacia usuarios y partes afectadas 
+
+Cuando una persona interactúe con IA, o cuando un resultado haya sido generado o influido de forma relevante por ella, debe informarse de manera clara y comprensible. La transparencia no es opcional: es una condición básica para proteger la confianza. 
+
+### 9. Contexto antes que automatización 
+
+No se debe automatizar ningún proceso sin contexto suficiente y verificado. Toda automatización debe partir de documentación clara, datos confiables, reglas explícitas y entendimiento del objetivo de negocio. 
+
+Automatizar sin contexto no acelera el valor: acelera el error. 
+
+### 10. Mejora continua basada en evidencia 
+
+Debemos medir de forma sistemática la calidad, los riesgos y el desempeño de los sistemas y procesos asistidos por IA, recoger retroalimentación de usuarios y equipos, e incorporar esa evidencia en ciclos formales de mejora. Ninguna solución de IA debe considerarse "terminada" o "correcta por defecto". 
+
+En otras palabras: no basta con desplegar; hay que observar, medir, aprender y ajustar. 
+
+## Siguientes Pasos 
+
+Los principios que describí en este artículo no son una lista de deseos: son las reglas que me propongo respetar en cada proyecto. El camino no está terminado; lo que sigue es aterrizarlo en acciones concretas.  
+
+- Medir el estado de madurez. Antes de adoptar cualquier herramienta o flujo con IA, necesito entender dónde estoy hoy: qué procesos están documentados, cuáles tienen criterios de calidad definidos y cuáles operan aún sobre conocimiento tácito. Sin esa línea base, cualquier automatización construye sobre arena. 
+
+- Generar un roadmap priorizado. Con la madurez medida, el siguiente paso es identificar los puntos de mayor fricción y mayor potencial. El roadmap no es un plan de herramientas, es un plan de impacto de negocio. 
+
+- Victorias tempranas. Elegir uno o dos casos de uso concretos, ejecutarlos con los principios aplicados, medir resultados y compartir aprendizajes. Las victorias tempranas son la evidencia que genera confianza organizacional para seguir avanzando.  
+
+Este viaje apenas comienza. Si estás en un proceso similar, me encantaría saber cómo lo estás viviendo.    
+
+### ¿Te fue útil este artículo? 
+
+Si este contenido te aportó valor, puedes mostrar tu apoyo con una contribución. Cada aporte ayuda a dedicar más tiempo a investigar, escribir y compartir. Gracias ❤️    
+
+### Comparte este artículo    Leer en Substack    Leer en Medium    Twitter    LinkedIn    Email      
+
+## Referencias  
+
+- HUG AI Methodology — "We don't automate developers, we multiply them" (2025) 
+
+- AWS Prescriptive Guidance — AI-Driven SDLC (2024) 
+
+- Open Policy Agent — Documentación oficial
+
+---
+
+# Using AI to Generate Knowledge
+
+URL: https://anferiro.me/articles/using-ai-to-generate-knowledge.html
+Published: 2026-04-04
+Language: en
+
+Knowledge Graph · AI April 4, 2026  
+
+# Using AI to Generate Knowledge! 
+
+My first ultra deep search with Knowledge Graph + Claude + Neo4j — and what the result looks like.      81 Nodes   3 Relationship Types   1 Deep Search   0 Manual Hours   
+
+This is not a mind map. What you see above is the result of my first ultra deep search using a Knowledge Graph built on top of Claude + Neo4j. 
+
+Amazing. Based on the deep-search skill, I created my own version that is running using Neo4j to store the plan and the result of the research. Each node is a concept. Each edge is a relationship discovered automatically — in seconds. 
+
+The graph doesn't just store information — it connects it. Every relationship emerged from semantic analysis of the document, not hardcoded rules. 
+
+The result: a navigable, queryable, and extensible knowledge map. What used to take hours of manual research is now structured, connected, and ready to reason over. 
+
+We are just getting started.  #KnowledgeGraph #Neo4j #Claude #AI #RAG #DeepResearch     
+
+### Did this article add value? 
+
+If this content was useful, you can show your appreciation with a contribution. Every bit of support helps dedicate more time to researching, writing, and sharing. Gracias ❤️    
+
+### Share this article    Twitter    LinkedIn    Email
+
+---
+
+# Stop the Red Meeting Madness: Reclaim Your Time
+
+URL: https://anferiro.me/articles/red-meeting-madness.html
+Published: 2025-06-11
+Language: en
+
+Leadership June 11, 2025  
+
+# Stop the Red Meeting Madness: Reclaim Your Time 
+
+Practical strategies to protect your time from unnecessary meetings and focus on meaningful work that truly drives results.       
+
+Hello again. Today I want to share some thoughts on meetings—and why we should avoid them, especially when they start piling up and stop adding real value. 
+
+I used to set my meetings in the calendar with the color red—it was my favorite. But that changed quickly. One day, I glanced at my screen and realized it looked like it had been infected by some strange, aggressive virus. Sadly, it wasn't a virus—it was the visual result of too many meetings. Meetings I hadn't asked for or even agreed to. At times, I had up to five scheduled at the same time. Just pure madness. 
+
+If this is happening to you, take action. That means you've already started recognizing the problem: meetings are consuming your time and keeping you from doing meaningful work. 
+
+Yes, some roles require more talking, advising, and alignment than others. But no matter how senior you are, your responsibilities still include analyzing data, reading emails, responding to messages, following through on initiatives, and driving execution. And most of that work doesn't get done in meetings. 
+
+Meetings are a tool—a powerful one—but they are not a silver bullet. Use them to communicate, to align, to remove blockers. But don't confuse presence with progress, especially as a manager. 
+
+### Take Control of Your Calendar 
+
+Here are three small but powerful steps to protect your time:  
+
+- Own your time. You're not just in charge of your calendar—you're responsible for using it wisely. Ask yourself: Why am I giving my time to someone else's priorities? 
+
+- Cancel unnecessary meetings. If a meeting has no clear objective or is poorly prepared, it doesn't deserve your time. Push back—gently but firmly. 
+
+- Decline when you're not needed. If your presence is optional or the meeting doesn't require your input, step away. Use that time to focus on deep work instead. Be polite, but protect your attention.  
+
+Make clear agreements with your teammates and stakeholders. Block time for lunch—it's not just a break, it's essential for your health and mental clarity. 
+
+### Your Time Is Non-Renewable 
+
+Time is your most valuable asset. Unlike money or energy, once it's gone, it doesn't come back. 
+
+ When you find time for everything, anything will take your time. But when you're intentional with your time, only what truly matters will make it onto your calendar.  
+
+Here's one insight I'll leave you with: When you find time for everything, anything will take your time. But when you're intentional with your time, only what truly matters will make it onto your calendar.   
+
+### Share this article    Share on Twitter    Share on LinkedIn    Share via Email

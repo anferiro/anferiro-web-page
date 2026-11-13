@@ -141,6 +141,35 @@ const translations = {
     footer: {
       copyright: "Made with ❤️",
       totalVisits: "🌍 Total Visits:"
+    },
+
+    // Redesign copy
+    site: {
+      skip: "Skip to content",
+      role: "CTO",
+      a1: "I'm ", a2: "Andres Rincon", a3: ", a ", a4: "CTO", a5: " in ", a6: "fintech",
+      a7: ". For more than ", a8: "20 years",
+      a9: " I've turned ideas into software: first as a developer, then as an architect, and now leading engineering teams and guiding how organisations adopt ",
+      a10: "generative AI",
+      a11: " responsibly. I write about architecture design systems, about AI, and about leading ",
+      a12: "people",
+      a13: " without losing the humanity in the work. I believe complexity should become clarity and that the goal is to be a better version of myself every day. I build bridges, and I teach about ",
+      a14: "Christ",
+      a15: ", technology, leadership and life, growing through every process. ",
+      a16: "Let's build something together.",
+      bridgeCap: "The Manhattan Bridge in March 1909, half built, already crossing the river.",
+      one: "article", many: "articles",
+      allWriting: "All writing",
+      search: "Search articles…",
+      noResults: "No results",
+      kgTitle: "Using AI to Generate Knowledge!",
+      kgExcerpt: "My first ultra deep search with Knowledge Graph + Claude + Neo4j. 81 nodes. 3 relationship types. 0 manual hours.",
+      prev: "Previous quote", next: "Next quote",
+      hello: "Hello",
+      writeMe: "Write to me",
+      footNav: "Navigate", footElse: "Elsewhere", footRead: "Read",
+      credit: "Photograph:",
+      legal: "© 2026 Andres Rincon"
     }
   },
   
@@ -285,6 +314,35 @@ const translations = {
     footer: {
       copyright: "Hecho con ❤️",
       totalVisits: "🌍 Total de Visitas:"
+    },
+
+    // Redesign copy
+    site: {
+      skip: "Saltar al contenido",
+      role: "CTO",
+      a1: "Soy ", a2: "Andres Rincon", a3: ", ", a4: "CTO", a5: " en ", a6: "fintech",
+      a7: ". Desde hace más de ", a8: "20 años",
+      a9: " convierto ideas en software: primero como desarrollador, luego como arquitecto y hoy liderando equipos de ingeniería y guiando cómo las organizaciones adoptan la ",
+      a10: "IA generativa",
+      a11: " de forma responsable. Escribo sobre sistemas de diseño arquitectónico, sobre IA y sobre liderar a ",
+      a12: "las personas",
+      a13: " sin perder la humanidad del trabajo. Creo que la complejidad debe volverse claridad y que la meta es ser una mejor versión de mí mismo cada día. Construyo puentes y enseño sobre ",
+      a14: "Cristo",
+      a15: ", tecnología, liderazgo y vida, creciendo en cada proceso. ",
+      a16: "Construyamos algo juntos.",
+      bridgeCap: "El puente de Manhattan en marzo de 1909, a medio construir, ya cruzando el río.",
+      one: "artículo", many: "artículos",
+      allWriting: "Todo lo escrito",
+      search: "Buscar artículos…",
+      noResults: "Sin resultados",
+      kgTitle: "¡Usando IA para generar conocimiento!",
+      kgExcerpt: "Mi primera búsqueda ultra profunda con Knowledge Graph + Claude + Neo4j. 81 nodos. 3 tipos de relación. 0 horas manuales.",
+      prev: "Cita anterior", next: "Cita siguiente",
+      hello: "Hola",
+      writeMe: "Escríbeme",
+      footNav: "Navegar", footElse: "En otros sitios", footRead: "Leer",
+      credit: "Fotografía:",
+      legal: "© 2026 Andres Rincon"
     }
   }
 };

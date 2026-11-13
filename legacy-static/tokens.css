@@ -1,0 +1,39 @@
+/* anferiro tokens — copied from the "anferiro" design system (claude.ai/design), tokens/anferiro.css.
+   Fonts are loaded from index.html. Re-sync from the design system rather than editing here. */
+
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-0: #07070a; --bg-1: #0c0c11; --surface: #111118; --surface-2: #191922; --glass: rgba(7, 7, 10, .72);
+  --border: #23232d; --border-strong: #6c6c7e; --grid-dot: #2a2a36;
+  --text-1: #f4f4f6; --text-2: #a6a6b4; --text-3: #878795;
+  --accent: #8b93ff; --accent-strong: #aab0ff; --accent-soft: #1a1c3a; --on-accent: #07070a;
+  --volt: #c6f25a; --volt-soft: #1f2a0b; --on-volt: #07070a; --focus: #aab0ff;
+  --success: #5eead4; --success-soft: #0b2a27;
+  --warning: #fbbf24; --warning-soft: #2d2106;
+  --danger: #ff7a85; --danger-soft: #321219;
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, .5), 0 2px 6px rgba(0, 0, 0, .3);
+  --shadow-glow: 0 0 0 1px rgba(139, 147, 255, .4), 0 8px 32px rgba(139, 147, 255, .22);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg-0: #ffffff; --bg-1: #fafafa; --surface: #ffffff; --surface-2: #f4f4f5; --glass: rgba(255, 255, 255, .8);
+  --border: #e4e4e7; --border-strong: #8c8c96; --grid-dot: #e4e4e7;
+  --text-1: #09090b; --text-2: #52525b; --text-3: #6b6b75;
+  --accent: #535fc9; --accent-strong: #4f46e5; --accent-soft: #eef0fc; --on-accent: #ffffff;
+  --volt: #4d7c0f; --volt-soft: #f0f9dc; --on-volt: #ffffff; --focus: #4f46e5;
+  --success: #0f766e; --success-soft: #e6f6f4;
+  --warning: #a15c07; --warning-soft: #fdf4e2;
+  --danger: #c0263a; --danger-soft: #fdecee;
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, .08), 0 2px 6px rgba(0, 0, 0, .04);
+  --shadow-glow: 0 0 0 1px rgba(94, 106, 210, .3), 0 8px 24px rgba(94, 106, 210, .18);
+}
+
+:root {
+  --font-sans: 'Montserrat', system-ui, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, monospace;
+  --r-sm: 6px; --r-md: 10px; --r-lg: 12px; --r-xl: 20px; --r-pill: 999px;
+  --d-fast: 150ms; --d-med: 240ms;
+  --ease-std: cubic-bezier(.4, 0, .2, 1); --ease-out: cubic-bezier(0, 0, .2, 1);
+}

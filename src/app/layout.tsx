@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://anferiro.me'),
   title: 'Andres Rincon · CTO',
   description: 'Andres Rincon, CTO in fintech. Writing about AI adoption, architecture design systems and principled leadership.',
-  icons: { icon: '/img/avatar.png', apple: '/img/avatar.png' },
+  icons: { icon: '/img/avatar_latest-icon.png', apple: '/img/avatar_latest-icon.png' },
   openGraph: {
     title: 'Andres Rincon · CTO',
     description: 'I help teams build better software through AI, architecture, and principled leadership.',

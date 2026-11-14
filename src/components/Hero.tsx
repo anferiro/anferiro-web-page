@@ -31,7 +31,7 @@ export function Hero() {
             animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
             transition={{ type: 'spring', stiffness: 90, damping: 18, delay: 0.1 }}
           >
-            <Image className="hero-photo" src="/img/avatar_latest-hero.png" width={192} height={192} alt="Andres Rincon" priority />
+            <Image className="hero-photo" src="/img/avatar_latest.png" width={192} height={192} alt="Andres Rincon" priority />
           </motion.div>
         </motion.div>
 

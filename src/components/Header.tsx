@@ -5,6 +5,35 @@ import { useEffect, useState } from 'react';
 import { useLang } from '@/i18n/LanguageProvider';
 import { ThemeToggle } from './ThemeToggle';
 
+// anferiro = AN(drés) FE(lipe) RI(ncón) RO(dríguez): la marca nace del "a." y el hover despliega el nombre.
+const NAME = [['an', 'drés '], ['fe', 'lipe '], ['ri', 'ncón '], ['ro', 'dríguez']] as const;
+
+function Mark() {
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    const id = setTimeout(() => setOpen(true), 900);
+    return () => clearTimeout(id);
+  }, []);
+  return (
+    <a
+      className={open ? 'bar-mark is-open' : 'bar-mark'}
+      href="#home"
+      aria-label="anferiro: Andrés Felipe Rincón Rodríguez"
+      title="Andrés Felipe Rincón Rodríguez"
+    >
+      <span className="mark-icon" aria-hidden>a<span className="mark-dot">.</span></span>
+      <span className="mark-name" aria-hidden>
+        {NAME.map(([pair, rest], i) => (
+          <span key={pair} className="mark-pair" style={{ ['--i' as string]: i }}>
+            {pair}
+            <span className="mark-rest">{rest}</span>
+          </span>
+        ))}
+      </span>
+    </a>
+  );
+}
+
 const links = [
   { id: 'writing', key: 'nav.articles' },
   { id: 'about', key: 'nav.bio' },
@@ -35,7 +64,7 @@ export function Header() {
   return (
     <motion.header className="bar" animate={{ y: hidden ? '-100%' : '0%' }} transition={{ duration: 0.3, ease: [0.2, 0.7, 0.2, 1] }}>
       <div className="wrap bar-in">
-        <a className="bar-mark" href="#home">anferiro</a>
+        <Mark />
         <nav className="bar-links" aria-label="Main">
           {links.map((l) => (
             <a key={l.id} href={`#${l.id}`} className={active === l.id ? 'is-active' : ''} data-hide-sm={l.id === 'about' ? '' : undefined}>

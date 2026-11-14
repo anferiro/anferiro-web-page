@@ -6,6 +6,9 @@ export function Footer() {
   const { t } = useLang();
   return (
     <footer className="foot">
+      <div className="wrap foot-sign" aria-hidden>
+        <span className="mark-icon">a<span className="mark-dot">.</span></span>
+      </div>
       <div className="wrap foot-in">
         <p>{t('site.legal')}</p>
         <p>

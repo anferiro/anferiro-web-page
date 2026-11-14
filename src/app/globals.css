@@ -281,3 +281,28 @@ section { padding-block: var(--section); }
 .contact-links li a:hover { color: var(--accent); }
 
 @media (prefers-reduced-motion: reduce) { .hero-halo { display: none; } }
+
+.foot-sign { margin-bottom: 24px; }
+.foot-sign .mark-icon { font-size: clamp(6rem, 18vw, 12rem); letter-spacing: -0.05em; }
+/* anferiro: el "a." se sella, de él nace "anferiro" y el hover/focus despliega el nombre completo */
+.bar-mark { --ease-out: cubic-bezier(0.16, 1, 0.3, 1); white-space: nowrap; display: inline-flex; align-items: center; gap: 0; transition: gap 0.7s var(--ease-out); }
+.bar-mark.is-open { gap: 10px; }
+.mark-icon { display: inline-block; font-weight: 700; font-size: 1.625rem; line-height: 1; color: var(--text-1); transform-origin: 0% 70%; }
+.mark-dot { display: inline-block; color: #c6f25a; }
+.bar-mark .mark-icon { animation: mark-pop 0.9s var(--ease-out) both; }
+.bar-mark .mark-dot { animation: mark-stamp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s both; }
+.mark-pair { display: inline-block; overflow: hidden; white-space: pre; vertical-align: bottom; max-width: 0; opacity: 0; transform: translateX(-0.8em) scale(0.6); filter: blur(6px); transform-origin: left center; transition: max-width 0.7s var(--ease-out), opacity 0.5s ease, transform 0.7s var(--ease-out), filter 0.5s ease; transition-delay: calc(var(--i) * 0.08s); }
+.bar-mark.is-open .mark-pair { max-width: 14ch; opacity: 1; transform: none; filter: none; }
+.mark-rest { display: inline-block; overflow: hidden; white-space: pre; vertical-align: bottom; max-width: 0; opacity: 0; filter: blur(4px); color: var(--ink-2); font-weight: 400; transition: max-width 0.6s var(--ease-out) calc(var(--i) * 0.06s), opacity 0.4s ease, filter 0.4s ease; }
+.bar-mark.is-open:is(:hover, :focus-visible) .mark-rest { max-width: 9ch; opacity: 1; filter: none; }
+@keyframes mark-pop { 0% { transform: scale(0.6); opacity: 0; } 40% { transform: scale(1.12, 0.9); opacity: 1; } 70% { transform: scale(0.96, 1.05); } 100% { transform: scale(1); } }
+@keyframes mark-stamp {
+  0% { transform: translateY(-0.6em) scale(0); text-shadow: none; }
+  60% { transform: translateY(0) scale(1.4); text-shadow: 0 0 12px #c6f25a; }
+  100% { transform: translateY(0) scale(1); text-shadow: 0 0 0 transparent; }
+}
+@media (prefers-reduced-motion: reduce) { .bar-mark, .mark-pair, .mark-rest { transition: none !important; } .mark-icon, .mark-dot { animation: none !important; } }
+@media (max-width: 600px) {
+  .bar-links { transition: opacity 0.4s ease; }
+  .bar-in:has(.bar-mark:hover, .bar-mark:focus-visible) .bar-links { opacity: 0; pointer-events: none; }
+}
